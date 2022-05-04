@@ -1,0 +1,8 @@
+@import "../../../styles/utils.scss";
+
+.container {
+  display: none;
+  @include tabletDown {
+    display: block;
+  }
+}
