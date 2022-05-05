@@ -1,9 +1,10 @@
 import React from "react";
 import AppHeader from "../../components/AppHeader";
+import styles from "./Layout.module.scss";
 
 export const Layout = ({ children }: any) => {
   return (
-    <div>
+    <div className={styles.container}>
       <AppHeader />
       {children}
       <h1>I am footer</h1>
