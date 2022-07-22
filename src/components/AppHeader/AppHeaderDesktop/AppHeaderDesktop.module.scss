@@ -9,12 +9,20 @@
   align-items: center;
   width: 100%;
   padding: 1rem 2rem 0.5rem 2rem;
+  background: $bg-color-primary;
+  transition: background 0.3s ease-out;
+
+  &.scrolledDown {
+    background: $bg-color-secondary;
+    background: linear-gradient(to bottom, $bg-color-secondary, transparent);
+  }
 
   @include tabletDown {
     display: none;
   }
 
   .logo {
+    flex-shrink: 0.25;
     width: 120px;
     height: auto;
     min-height: 50px;
@@ -30,6 +38,7 @@
     align-items: center;
 
     a {
+      flex-shrink: 0;
       margin-right: 3rem;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
