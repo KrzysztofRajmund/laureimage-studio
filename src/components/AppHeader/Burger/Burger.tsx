@@ -12,9 +12,9 @@ const Burger = ({ onClick, show }: IBurger) => {
     }
     return (
         <div className={cx(styles.container, { [styles.closeIcon]: show })} onClick={handleClick}>
-            <div className={cx(styles.line, styles.one)}></div>
-            <div className={cx(styles.line, styles.two)}></div>
-            <div className={cx(styles.line, styles.three)}></div>
+            <div className={styles.one}></div>
+            <div className={styles.two}></div>
+            <div className={styles.three}></div>
         </div>
     )
 }
