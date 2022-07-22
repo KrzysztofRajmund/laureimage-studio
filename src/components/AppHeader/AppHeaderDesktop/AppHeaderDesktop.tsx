@@ -17,19 +17,19 @@ export const AppHeaderDesktop = () => {
         <Image src={logo} alt='laureimage logo' />
       </CustomLink>
       <div className={styles.menu}>
-        <CustomLink href='/' activeStyle='underline'>
+        <CustomLink href='/' activeLinkStyle='underline'>
           Home
         </CustomLink>
-        <CustomLink href='/portfolio' activeStyle='underline'>
+        <CustomLink href='/portfolio' activeLinkStyle='underline'>
           Portfolio
         </CustomLink>
-        <CustomLink href='/onas' activeStyle='underline'>
+        <CustomLink href='/onas' activeLinkStyle='underline'>
           O nas
         </CustomLink>
-        <CustomLink href='/pakiety' activeStyle='underline'>
+        <CustomLink href='/pakiety' activeLinkStyle='underline'>
           Pakiety
         </CustomLink>
-        <CustomLink href='/kontakt' activeStyle='underline'>
+        <CustomLink href='/kontakt' activeLinkStyle='underline'>
           Kontakt
         </CustomLink>
       </div>

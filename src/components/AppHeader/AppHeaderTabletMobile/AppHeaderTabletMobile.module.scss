@@ -1,7 +1,41 @@
-@import "../../../styles/utils.scss";
+@import '../../../styles/utils.scss';
 
-.container {
+.header {
   display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+
+  @include tabletDown {
+    display: flex;
+  }
+
+  .content {
+    flex-grow: 1;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    h1,
+    .logo {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+    }
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-left: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+.modal {
+  display: none;
+
   @include tabletDown {
     display: block;
   }

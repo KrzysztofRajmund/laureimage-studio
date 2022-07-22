@@ -7,21 +7,21 @@ interface ICustomLink {
     href: string;
     children: string | JSX.Element;
     className?: string;
-    activeStyle?: string;
+    activeLinkStyle?: string;
 }
 
 const CustomLink = ({
     href,
     children,
     className,
-    activeStyle,
+    activeLinkStyle,
 }: ICustomLink) => {
     const router = useRouter();
 
     return (
         <Link href={href} passHref>
             <a
-                className={cx(className, router.asPath === href && styles[activeStyle || "default"])}
+                className={cx(className, router.asPath === href && styles[activeLinkStyle || "default"])}
             >
                 {children}
             </a>
