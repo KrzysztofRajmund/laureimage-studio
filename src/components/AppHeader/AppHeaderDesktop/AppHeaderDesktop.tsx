@@ -1,29 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import CustomLink from '../CustomLink/CustomLink';
+import useScroll from './../../../utils/hooks/useScroll';
 import logo from '../../../../public/assets/logo.png';
 import cx from 'classnames';
 import styles from './AppHeaderDesktop.module.scss';
 
 export const AppHeaderDesktop = () => {
-  const [scrolled, setScrolled] = useState(false);
   const navRef = useRef(null);
+  const { justScrolled } = useScroll(navRef);
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (navRef.current) {
-        const { clientTop, clientHeight, scrollTop, scrollHeight } = navRef.current;
-        // console.log("scroll:", clientTop, clientHeight, scrollTop, scrollHeight, window.scrollY)
-        if (window.scrollY > (clientHeight || scrollHeight)) setScrolled(true);
-        if (window.scrollY < (clientHeight || scrollHeight)) setScrolled(false);
-      }
-    }
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
 
   return (
-    <nav className={cx(styles.container, { [styles.scrolledDown]: scrolled })} ref={navRef}>
+    <nav className={cx(styles.container, { [styles.scrolledDown]: justScrolled })} ref={navRef}>
       <CustomLink href='/' className={styles.logo}>
         <Image src={logo} alt='laureimage logo' />
       </CustomLink>
