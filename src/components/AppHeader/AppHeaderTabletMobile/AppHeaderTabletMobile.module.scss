@@ -9,31 +9,24 @@
 
 .header {
   display: none;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   padding: 1rem 1rem 1rem 2rem;
 
   @include tabletDown {
-    display: flex;
+    display: inline-flex;
   }
 
-  .content {
-    flex-grow: 1;
-    display: inline-flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    .title,
-    .logo {
-      @extend .text;
-    }
-    .logo {
-      height: auto;
-      margin-left: 2rem;
-      font-weight: 400;
-      letter-spacing: 0.1rem;
-    }
+  .title,
+  .logo {
+    @extend .text;
+  }
+  .logo {
+    height: auto;
+    margin-left: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -60,5 +53,11 @@
   a {
     @extend .text;
     padding-bottom: 1.2rem;
+    opacity: 1;
+    transition: opacity 0.3s linear;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
