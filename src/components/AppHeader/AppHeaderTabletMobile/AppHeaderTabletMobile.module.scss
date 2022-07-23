@@ -1,0 +1,64 @@
+@import '../../../styles/utils.scss';
+@import '../../../styles/variables.scss';
+
+.text {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1rem 1rem 2rem;
+
+  @include tabletDown {
+    display: flex;
+  }
+
+  .content {
+    flex-grow: 1;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .title,
+    .logo {
+      @extend .text;
+    }
+    .logo {
+      height: auto;
+      margin-left: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 15%;
+  left: 0;
+  padding: 2rem;
+  opacity: 0;
+  background: transparent;
+  transition: opacity 0.3s ease-out, background 1s ease-out;
+
+  @include tabletDown {
+    display: flex;
+  }
+
+  &.show {
+    opacity: 1;
+    background: $bg-color-secondary;
+  }
+
+  a {
+    @extend .text;
+    padding-bottom: 1.2rem;
+  }
+}
