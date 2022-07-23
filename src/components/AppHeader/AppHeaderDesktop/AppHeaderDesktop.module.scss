@@ -12,13 +12,13 @@
   background: $bg-color-primary;
   transition: background 0.3s ease-out;
 
+  @include tabletDown {
+    display: none;
+  }
+
   &.scrolledDown {
     background: $bg-color-secondary;
     background: linear-gradient(to bottom, $bg-color-secondary, transparent);
-  }
-
-  @include tabletDown {
-    display: none;
   }
 
   .logo {
