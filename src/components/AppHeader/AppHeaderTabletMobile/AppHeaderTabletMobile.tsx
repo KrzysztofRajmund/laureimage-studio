@@ -7,10 +7,6 @@ import styles from "./AppHeaderTabletMobile.module.scss";
 const AppHeaderTabletMobile = () => {
   const [show, setShow] = useState(false);
 
-  const showModal = () => {
-    setShow(true);
-  }
-
   const closeModal = () => {
     setShow(false);
   }
@@ -21,16 +17,14 @@ const AppHeaderTabletMobile = () => {
 
   return (
     <>
-      <nav className={styles.header}>
-        <Burger onClick={toggleModal} show={show} />
-        <div className={styles.content}>
-          <h1 className={styles.title}>Fotografia Ślubna</h1>
-          <CustomLink href='/' className={styles.logo}>
-            LaureImage
-          </CustomLink>
-        </div>
-      </nav>
-      <nav className={cx(styles.menu, { [styles.show]: show })}>
+      <Burger onClick={toggleModal} show={show} />
+      <header className={styles.header}>
+        <h1 className={styles.title}>Fotografia Ślubna</h1>
+        <CustomLink href='/' className={styles.logo}>
+          LaureImage
+        </CustomLink>
+      </header>
+      <nav className={cx(styles.menu, { [styles.show]: show })} onClick={closeModal}>
         <CustomLink href='/'>
           Home
         </CustomLink>
