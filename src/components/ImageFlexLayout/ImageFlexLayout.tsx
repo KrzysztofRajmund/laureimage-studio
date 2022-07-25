@@ -38,6 +38,8 @@ const ImageFlexLayout = () => {
                         <Image
                             src={image.url}
                             alt={`image ${image.id}`}
+                            placeholder='blur'
+                            blurDataURL={placeholder.src}
                             layout='fill'
                             objectFit='cover'
                         />
