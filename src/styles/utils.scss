@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 @mixin desktopDown() {
   @media screen and (max-width: $desktop-max-width) {
@@ -6,10 +6,15 @@
   }
 }
 
+@mixin desktopSmallDown() {
+  @media screen and (max-width: $desktop-small-max-width) {
+    @content;
+  }
+}
+
 @mixin tabletDown() {
   @media screen and (max-width: $tablet-max-width),
-    /* IPad Pro*/ 
-    (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    /* IPad Pro*/ (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     @content;
   }
 }
