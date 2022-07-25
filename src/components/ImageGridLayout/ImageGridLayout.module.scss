@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 @import '../../styles/utils.scss';
 
-.container {
+.grid {
   display: grid;
   grid-template-columns: 1fr 2fr minmax(300px, 500px);
   grid-auto-rows: 350px 500px 300px;

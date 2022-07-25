@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import Image from 'next/image';
+import axios from 'axios';
 import placeholder from "../../../public/assets/placeholder.jpg";
 import styles from './ImageGridLayout.module.scss';
 
@@ -24,7 +24,7 @@ const ImageGridLayout = () => {
     }, []);
 
     return (
-        <div className={styles.container}>
+        <div className={styles.grid}>
             <h1 className={styles.title}>Portret modowy &amp; biznes</h1>
             {images.slice(0, 12).map((image: IImage) => {
                 return (
