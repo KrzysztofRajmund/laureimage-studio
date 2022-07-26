@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem 0.5rem 2rem;
+
+  .footerTop {
+    margin: 15px;
+  }
+  .footerMiddle {
+  }
+  .footerBottom {
+    width: 100%;
+    padding: 0.2rem;
+    font-family: $font-family-secondary;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $bg-color-secondary;
+    opacity: 0.7;
+  }
+}

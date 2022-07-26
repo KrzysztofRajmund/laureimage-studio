@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+@import '../../styles/utils.scss';
+
+.container {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 50%;
+
+  .arrow {
+    position: absolute;
+    left: 50%;
+    height: 35%;
+    width: 35%;
+    border-top: 2px solid $bg-color-secondary;
+    border-left: 2px solid $bg-color-secondary;
+    transform: rotate(45deg) translateY(75%);
+    animation: arrowUp 1s infinite;
+  }
+}
+
+@keyframes arrowUp {
+  0% {
+    opacity: 1;
+    top: 35%;
+  }
+
+  100% {
+    opacity: 0;
+    top: -5%;
+  }
+}
