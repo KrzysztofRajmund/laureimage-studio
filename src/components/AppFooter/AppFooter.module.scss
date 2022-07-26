@@ -8,6 +8,10 @@
   padding: $app-padding-top $app-padding-right $app-padding-bottom / 2
     $app-padding-left;
 
+  @include phone {
+    padding: 6rem 1rem 4rem 1rem;
+  }
+
   .footerTop {
     margin: 15px;
   }
