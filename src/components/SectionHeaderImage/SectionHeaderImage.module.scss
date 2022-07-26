@@ -25,6 +25,12 @@
     color: $bg-color-secondary;
     font-size: 5rem;
     line-height: 6.5rem;
+
+    @include phone {
+      left: 5%;
+      font-size: 4rem;
+      line-height: 5rem;
+    }
   }
 
   .icon {

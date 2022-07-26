@@ -11,6 +11,13 @@
   width: 100%;
   color: $text-color-secondary;
 
+  @include phone {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: $app-padding-top / 2 0 $app-padding-bottom/2 0;
+  }
+
   h2,
   h4,
   p {
@@ -27,6 +34,12 @@
     font-weight: 400;
     letter-spacing: 0.3rem;
     line-height: 5rem;
+
+    @include phone {
+      left: 5%;
+      font-size: 3.2rem;
+      width: 100%;
+    }
   }
 
   h4 {
@@ -37,13 +50,38 @@
     letter-spacing: 0.3rem;
     line-height: 1.8rem;
     text-transform: uppercase;
+
+    @include phone {
+      padding: 0 1rem;
+      min-height: 280px;
+      text-align: center;
+    }
   }
 
   .image {
     margin-right: 100px;
     flex: 1 0 60%;
     position: relative;
-    min-height: 550px;
+    min-height: 650px;
+
+    @include desktopDown {
+      min-height: 500px;
+    }
+
+    @include desktopSmallDown {
+      min-height: 450px;
+    }
+
+    @include tabletDown {
+      margin-right: 45px;
+      min-height: 325px;
+    }
+
+    @include phone {
+      width: 100%;
+      min-height: 400px;
+      margin-right: 0;
+    }
 
     .imageContent {
       position: absolute;
@@ -52,6 +90,19 @@
       display: flex;
       justify-content: space-between;
       opacity: 0.7;
+
+      @include tabletDown {
+        justify-content: flex-end;
+        padding-right: 10px;
+      }
+
+      p {
+        &:last-of-type {
+          @include tabletDown {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

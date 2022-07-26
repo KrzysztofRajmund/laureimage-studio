@@ -39,14 +39,16 @@
 
   .menu {
     flex-grow: 1;
-    @include flexCenter;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
     a {
       flex-shrink: 0;
-      margin-right: 3rem;
+      margin-left: 3rem;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
-      text-align: center;
+      text-align: end;
       font-size: 1.25rem;
       opacity: 1;
       transition: opacity 0.3s linear;

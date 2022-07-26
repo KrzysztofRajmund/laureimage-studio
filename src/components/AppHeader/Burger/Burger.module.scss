@@ -4,7 +4,7 @@
 .container {
   z-index: 100;
   position: fixed;
-  top: $app-padding-top / 2;
+  top: $app-padding-top * 0.55;
   left: $app-padding-left;
   display: none;
   flex-direction: column;
@@ -20,6 +20,8 @@
   @include phone {
     width: 27px;
     height: 22px;
+    top: 3.5%;
+    left: 5%;
   }
 
   .one,
