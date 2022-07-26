@@ -12,15 +12,19 @@
     margin: 15px;
   }
   .footerMiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 2rem 3rem;
   }
   .footerBottom {
     width: 100%;
-    padding: 0.2rem;
+    padding: 0.2rem 1.5rem 0.2rem 0.2rem;
     font-family: $font-family-secondary;
-    text-align: center;
+    text-align: end;
     text-transform: uppercase;
-    background-color: $bg-color-secondary;
-    opacity: 0.7;
+    color: $bg-color-secondary;
+    background-color: #000;
   }
 }
