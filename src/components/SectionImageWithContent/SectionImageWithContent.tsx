@@ -2,8 +2,8 @@ import Image, { StaticImageData } from 'next/image';
 import styles from './SectionImageWithContent.module.scss';
 
 type ImageDesc = {
-    desc1?: string;
-    desc2?: string;
+    desc?: string;
+    actionButton?: JSX.Element | string;
 };
 
 interface ISectionImageWithContent {
@@ -20,15 +20,20 @@ const SectionImageWithContent = ({
 }: ISectionImageWithContent) => {
     return (
         <section className={styles.container}>
+            <h2>{title}</h2>
+            <h4>{subtitle}</h4>
             <div className={styles.image}>
                 <Image
                     priority
                     src={image}
-                    alt={imageDesc?.desc1}
+                    alt={imageDesc?.desc}
                     placeholder='blur'
                     layout='fill'
                     objectFit='cover'
                 />
+                <div className={styles.imageContent}>
+                    <p>{imageDesc?.desc}</p><p>{imageDesc?.actionButton}</p>
+                </div>
             </div>
         </section>
     );

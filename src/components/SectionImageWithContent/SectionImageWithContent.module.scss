@@ -1,11 +1,57 @@
 @import '../../styles/utils.scss';
+@import '../../styles/variables.scss';
 
 .container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: $app-padding-top * 2 $app-padding-right $app-padding-bottom * 2
+    $app-padding-left;
+  width: 100%;
+  color: $text-color-secondary;
+
+  h2,
+  h4,
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    z-index: 1;
+    position: absolute;
+    top: 14%;
+    left: 10%;
+    width: 50%;
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    line-height: 5rem;
+  }
+
+  h4 {
+    flex: 1 0 20%;
+    padding-right: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+  }
+
   .image {
-    @include phone {
-      position: relative;
-      height: 600px;
+    margin-right: 100px;
+    flex: 1 0 60%;
+    position: relative;
+    min-height: 550px;
+
+    .imageContent {
+      position: absolute;
+      bottom: -5%;
       width: 100%;
+      display: flex;
+      justify-content: space-between;
+      opacity: 0.7;
     }
   }
 }

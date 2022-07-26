@@ -12,7 +12,7 @@ const AppFooter = () => {
                 <FooterMiddle />
             </div>
             <div className={styles.footerBottom}>
-                <small>&copy; Copyrights 2022. Created by RajmundTech</small>
+                <small>&copy; Copyrights 2022. Created by RajmundTech.</small>
             </div>
         </footer>
     )

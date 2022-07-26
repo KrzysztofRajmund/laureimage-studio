@@ -1,5 +1,6 @@
 @import './variables.scss';
 
+//screens
 @mixin desktopDown() {
   @media screen and (max-width: $desktop-max-width) {
     @content;
@@ -23,4 +24,17 @@
   @media screen and (max-width: $phone-max-width) {
     @content;
   }
+}
+
+//flex
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//text
+@mixin textDefault {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }

@@ -1,11 +1,22 @@
-import SectionHeaderImage from '../../components/SectionHeaderImage';
 import ArrowJump from '../../components/ArrowJump';
-import imageExample from '../../../public/assets/image-example.jpg';
+import CustomLink from '../../components/CustomLink';
+import SectionHeaderImage from '../../components/SectionHeaderImage';
+import SectionImageWithContent from '../../components/SectionImageWithContent';
+import headerImage from '../../../public/assets/homescreen-header-image.jpg';
+import contentImage from '../../../public/assets/homescreen-content-image.jpg';
 import styles from './HomeScreen.module.scss';
 
 const HomeScreen = () => {
-  const title = 'Modernistyczna Fotografia Ślubna';
-  const arrowStyle = {
+
+  const contentTitle = 'Modernistyczna Fotografia Ślubna';
+  const contentSubtitle = 'Piękne Wasze Historie';
+  const contentImageDesc = {
+    desc: 'Romantyczne. Piękne. Nowoczesne.',
+    actionButton: <CustomLink href='portfolio'>Historie ślubne &gt;&gt;</CustomLink>,
+  }
+
+  const headerTitle = 'Modernistyczna Fotografia Ślubna';
+  const headerArrowStyle = {
     backgroundColor: 'transparent',
     width: '65px',
     height: '65px'
@@ -13,7 +24,8 @@ const HomeScreen = () => {
 
   return (
     <div className={styles.container}>
-      <SectionHeaderImage title={title} image={imageExample} icon={<ArrowJump arrowDown containerStyle={arrowStyle} />} />
+      <SectionImageWithContent title={contentTitle} image={contentImage} subtitle={contentSubtitle} imageDesc={contentImageDesc} />
+      <SectionHeaderImage title={headerTitle} image={headerImage} icon={<ArrowJump arrowDown containerStyle={headerArrowStyle} />} />
     </div>
   );
 };

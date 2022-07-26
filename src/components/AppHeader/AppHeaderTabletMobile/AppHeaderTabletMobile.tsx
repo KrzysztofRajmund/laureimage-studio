@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Burger from '../Burger/Burger';
-import CustomLink from '../CustomLink/CustomLink';
+import CustomLink from '../../CustomLink';
 import cx from 'classnames';
 import styles from "./AppHeaderTabletMobile.module.scss";
 

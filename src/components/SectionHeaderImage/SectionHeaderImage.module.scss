@@ -18,13 +18,12 @@
   }
 
   h1 {
+    @include textDefault;
     top: 45%;
     left: 10%;
     width: 50%;
     color: $bg-color-secondary;
     font-size: 5rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
     line-height: 6.5rem;
   }
 
