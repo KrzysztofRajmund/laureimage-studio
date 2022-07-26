@@ -3,10 +3,15 @@
 
 .container {
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-color: #000;
   border-radius: 50%;
+
+  @include desktopSmallDown {
+    width: 30px;
+    height: 30px;
+  }
 
   .arrow {
     position: absolute;
