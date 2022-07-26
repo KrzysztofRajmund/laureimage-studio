@@ -13,6 +13,10 @@
     height: 30px;
   }
 
+  &.down {
+    transform: rotate(180deg);
+  }
+
   .arrow {
     position: absolute;
     left: 50%;

@@ -1,0 +1,11 @@
+@import '../../styles/utils.scss';
+
+.container {
+  .image {
+    @include phone {
+      position: relative;
+      height: 600px;
+      width: 100%;
+    }
+  }
+}

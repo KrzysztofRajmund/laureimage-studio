@@ -1,12 +1,12 @@
 import FooterMiddle from './FooterMiddle';
-import PageUp from "../PageUp";
+import ArrowJump from "../ArrowJump";
 import styles from './AppFooter.module.scss';
 
 const AppFooter = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.footerTop}>
-                <PageUp />
+                <ArrowJump />
             </div>
             <div className={styles.footerMiddle}>
                 <FooterMiddle />

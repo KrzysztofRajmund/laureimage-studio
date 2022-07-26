@@ -9,8 +9,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-height: 90px;
   padding: 1rem 2rem 0.5rem 2rem;
-  background: $bg-color-primary;
+  background: linear-gradient(to bottom, $bg-color-primary, transparent);
+  background-color: $bg-color-primary;
   transition: background 0.3s ease-out;
 
   @include tabletDown {
@@ -18,8 +20,7 @@
   }
 
   &.scrolledDown {
-    background: $bg-color-secondary;
-    background: linear-gradient(to bottom, $bg-color-secondary, transparent);
+    background: linear-gradient(to bottom, $bg-color-primary, transparent);
   }
 
   .logo {
