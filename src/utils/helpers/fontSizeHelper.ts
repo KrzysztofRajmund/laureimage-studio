@@ -9,9 +9,9 @@ export const fontSizeHelper = () => {
   let fontSize;
 
   if (width <= ScreenSize.XS) {
-    fontSize = base * 0.6;
+    fontSize = base * 0.7;
   } else if (width <= ScreenSize.SM) {
-    fontSize = base * 0.75;
+    fontSize = base * 0.8;
   } else if (width <= ScreenSize.MD) {
     fontSize = base * 0.8;
   } else if (width <= ScreenSize.LG) {

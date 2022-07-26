@@ -14,7 +14,9 @@ export const AppHeaderDesktop = () => {
   return (
     <nav className={cx(styles.container, { [styles.scrolledDown]: justScrolled })} ref={navRef}>
       <CustomLink href='/' className={styles.logo}>
-        <Image src={logo} alt='laureimage logo' />
+        {/* TODO: when logo will be ready replace with image */}
+        {/* <Image src={logo} alt='laureimage logo' /> */}
+        Laureimage
       </CustomLink>
       <div className={styles.menu}>
         <CustomLink href='/' activeLinkStyle='underline'>

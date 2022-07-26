@@ -1,0 +1,23 @@
+@import '../../../styles/utils.scss';
+
+.container {
+  text-align: center;
+  width: 60%;
+
+  @include tabletDown {
+    width: 100%;
+  }
+  h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    text-align: justify;
+    @include tabletDown {
+      font-size: 1.5rem;
+    }
+  }
+}
