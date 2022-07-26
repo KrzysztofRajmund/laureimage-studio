@@ -9,8 +9,11 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 2rem 0.5rem 2rem;
-  background: $bg-color-primary;
+  min-height: 90px;
+  padding: $app-padding-top / 2 $app-padding-right $app-padding-bottom / 2
+    $app-padding-left;
+  background: linear-gradient(to bottom, $bg-color-primary, transparent);
+  background-color: $bg-color-primary;
   transition: background 0.3s ease-out;
 
   @include tabletDown {
@@ -18,17 +21,16 @@
   }
 
   &.scrolledDown {
-    background: $bg-color-secondary;
-    background: linear-gradient(to bottom, $bg-color-secondary, transparent);
+    background: linear-gradient(to bottom, $bg-color-primary, transparent);
   }
 
   .logo {
     flex-shrink: 0.25;
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.258);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
     //TODO: when logo will be ready
     // width: 120px;
     // height: auto;
@@ -38,15 +40,15 @@
   .menu {
     flex-grow: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 
     a {
       flex-shrink: 0;
-      margin-right: 3rem;
+      margin-left: 3rem;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
-      text-align: center;
+      text-align: end;
       font-size: 1.25rem;
       opacity: 1;
       transition: opacity 0.3s linear;

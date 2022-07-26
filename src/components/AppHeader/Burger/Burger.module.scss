@@ -1,10 +1,11 @@
 @import '../../../styles/utils.scss';
+@import '../../../styles/variables.scss';
 
 .container {
   z-index: 100;
   position: fixed;
-  top: 3%;
-  left: 30px;
+  top: $app-padding-top * 0.55;
+  left: $app-padding-left;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -19,6 +20,8 @@
   @include phone {
     width: 27px;
     height: 22px;
+    top: 3.5%;
+    left: 5%;
   }
 
   .one,

@@ -1,0 +1,41 @@
+@import '../../styles/utils.scss';
+@import '../../styles/variables.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  @include phone {
+    height: 600px;
+    width: 100%;
+  }
+
+  h1,
+  .icon {
+    z-index: 1;
+    position: absolute;
+  }
+
+  h1 {
+    @include textDefault;
+    top: 45%;
+    left: 10%;
+    width: 50%;
+    color: $bg-color-secondary;
+    font-size: 5rem;
+    line-height: 6.5rem;
+
+    @include phone {
+      left: 5%;
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+
+  .icon {
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
