@@ -1,4 +1,7 @@
+import { useRef } from 'react';
 import Image, { StaticImageData } from 'next/image';
+import { useIntersection } from '../../utils/hooks';
+import cx from 'classnames';
 import styles from './SectionHeaderImage.module.scss';
 
 interface ISectionHeaderImage {
@@ -7,9 +10,13 @@ interface ISectionHeaderImage {
     icon: JSX.Element;
 }
 const SectionHeaderImage = ({ image, title, icon }: ISectionHeaderImage) => {
+    const containerRef = useRef(null);
+    const titleRef = useRef(null);
+    const isContainerInView = useIntersection(containerRef, '0px', 100);
+    const isTitleInView = useIntersection(titleRef, '0px', 1000);
     return (
-        <section className={styles.container}>
-            <h1>{title}</h1>
+        <section className={cx(styles.container, { [styles.animate]: isContainerInView })} ref={containerRef}>
+            <h1 className={cx({ [styles.animate]: isTitleInView })} ref={titleRef}>{title}</h1>
             <div className={styles.icon}>
                 {icon}
             </div>
