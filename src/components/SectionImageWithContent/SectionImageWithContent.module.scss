@@ -26,23 +26,31 @@
 
   h2 {
     z-index: 1;
+    opacity: 0;
     position: absolute;
-    top: 14%;
+    top: 25%;
     left: 10%;
     width: 50%;
     font-size: 3.5rem;
     font-weight: 400;
     letter-spacing: 0.3rem;
     line-height: 5rem;
+    transition: all 0.3s linear;
 
     @include phone {
       left: 5%;
       font-size: 3.2rem;
       width: 100%;
     }
+
+    &.animate {
+      top: 14%;
+      opacity: 1;
+    }
   }
 
   h4 {
+    opacity: 0;
     flex: 1 0 20%;
     padding-right: 1.2rem;
     font-size: 1.5rem;
@@ -50,19 +58,29 @@
     letter-spacing: 0.3rem;
     line-height: 1.8rem;
     text-transform: uppercase;
+    transform: translateY(50%);
+    transition: all 0.3s linear;
 
     @include phone {
       padding: 0 1rem;
       min-height: 280px;
       text-align: center;
     }
+
+    &.animate {
+      transform: translateY(0%);
+      opacity: 1;
+    }
   }
 
   .image {
-    margin-right: 100px;
+    opacity: 0;
     flex: 1 0 60%;
     position: relative;
+    margin-right: 100px;
     min-height: 650px;
+    transform: translateY(50%);
+    transition: all 0.7s linear;
 
     @include desktopDown {
       min-height: 500px;
@@ -81,6 +99,11 @@
       width: 100%;
       min-height: 400px;
       margin-right: 0;
+    }
+
+    &.animate {
+      transform: translateY(0%);
+      opacity: 1;
     }
 
     .imageContent {

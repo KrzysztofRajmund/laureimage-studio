@@ -2,13 +2,21 @@
 @import '../../styles/variables.scss';
 
 .container {
+  opacity: 0;
   position: relative;
   width: 100%;
   height: 100vh;
+  transform: translateY(50%);
+  transition: all 0.7s linear;
 
   @include phone {
     height: 600px;
     width: 100%;
+  }
+
+  &.animate {
+    transform: translateY(0%);
+    opacity: 1;
   }
 
   h1,
@@ -19,17 +27,24 @@
 
   h1 {
     @include textDefault;
-    top: 45%;
+    opacity: 0;
+    bottom: 75%;
     left: 10%;
     width: 50%;
     color: $bg-color-secondary;
     font-size: 5rem;
     line-height: 6.5rem;
+    transition: all 0.3s linear;
 
     @include phone {
       left: 5%;
       font-size: 4rem;
       line-height: 5rem;
+    }
+
+    &.animate {
+      top: 45%;
+      opacity: 1;
     }
   }
 
