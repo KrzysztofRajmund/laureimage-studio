@@ -24,8 +24,8 @@ const HomeScreen = () => {
 
   return (
     <div className={styles.container}>
-      <SectionImageWithContent title={contentTitle} image={contentImage} subtitle={contentSubtitle} imageDesc={contentImageDesc} />
       <SectionHeaderImage title={headerTitle} image={headerImage} icon={<ArrowJump arrowDown containerStyle={headerArrowStyle} />} />
+      <SectionImageWithContent title={contentTitle} image={contentImage} subtitle={contentSubtitle} imageDesc={contentImageDesc} />
     </div>
   );
 };

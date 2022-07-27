@@ -10,6 +10,11 @@
     $app-padding-left;
   width: 100%;
   color: $text-color-secondary;
+  opacity: 0.2;
+
+  &.animate {
+    opacity: 1;
+  }
 
   @include phone {
     flex-direction: column;
@@ -50,6 +55,10 @@
     letter-spacing: 0.3rem;
     line-height: 1.8rem;
     text-transform: uppercase;
+
+    &.animate {
+      color: red;
+    }
 
     @include phone {
       padding: 0 1rem;

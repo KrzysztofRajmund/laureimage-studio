@@ -2,6 +2,7 @@
 @import '../../styles/utils.scss';
 
 .footer {
+  min-height: 200vh;
   @include flexCenter;
   flex-direction: column;
   width: 100%;

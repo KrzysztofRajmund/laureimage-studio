@@ -1,18 +1,18 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import CustomLink from '../../CustomLink';
-import useScroll from './../../../utils/hooks/useScroll';
+import { useInView } from '../../../utils/hooks';
 import logo from '../../../../public/assets/logo.png';
 import cx from 'classnames';
 import styles from './AppHeaderDesktop.module.scss';
 
 export const AppHeaderDesktop = () => {
   const navRef = useRef(null);
-  const { justScrolled } = useScroll(navRef);
+  const { justScrolledBy } = useInView(navRef, 0);
 
 
   return (
-    <nav className={cx(styles.container, { [styles.scrolledDown]: justScrolled })} ref={navRef}>
+    <nav className={cx(styles.container, { [styles.scrolledDown]: justScrolledBy })} ref={navRef}>
       <CustomLink href='/' className={styles.logo}>
         {/* TODO: when logo will be ready replace with image */}
         {/* <Image src={logo} alt='laureimage logo' /> */}
