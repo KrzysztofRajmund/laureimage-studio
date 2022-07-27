@@ -22,9 +22,7 @@ const useIntersection = (
                 setIsVisible(entry.isIntersecting);
             }
         }, options);
-        //////////////
-        console.log("observer:", observer)
-        //////////////
+
         el && observer.observe(el);
         return () => observer.unobserve(el as HTMLDivElement);
     }, [ref, offset, delay]);
