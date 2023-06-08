@@ -1,0 +1,71 @@
+@import '../../styles/utils.scss';
+@import '../../styles/variables.scss';
+
+.container {
+  width: 100%;
+  .title {
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px;
+
+    .imageContainer {
+      position: relative;
+      width: 400px;
+      height: 600px;
+      margin: 5px 15px;
+
+      @include desktopSmallDown {
+        margin: 5px 8px;
+      }
+
+      @include desktopDown {
+        width: 300px;
+        height: 460px;
+      }
+
+      @include desktopSmallDown {
+        width: 285px;
+        height: 425px;
+        margin: 5px 10px;
+      }
+
+      @include phone {
+        width: 325px;
+        height: 400px;
+        margin: 10px 0px;
+      }
+
+      h4 {
+        z-index: 1;
+        pointer-events: none;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin: 0;
+        font-family: $font-family-secondary;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: $bg-color-secondary;
+        mix-blend-mode: screen;
+      }
+
+      img {
+        transform: scale(1);
+        opacity: 1;
+        transition: opacity 0.3s ease-out, transform 0.2s ease-out;
+        &:hover {
+          z-index: 2;
+          opacity: 0.5;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,4 @@
-import { useState, useEffect, CSSProperties } from 'react';
 import Image from 'next/image';
-import axios from 'axios';
 import placeholder from '../../../public/assets/placeholder.jpg';
 import cx from 'classnames';
 import styles from './ImageFlexLayout.module.scss';
