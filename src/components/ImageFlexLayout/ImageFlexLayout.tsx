@@ -1,40 +1,26 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, CSSProperties } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
 import placeholder from '../../../public/assets/placeholder.jpg';
 import cx from 'classnames';
 import styles from './ImageFlexLayout.module.scss';
+import { ImageType } from '../../screens/HomeScreen/HomeScreen';
 
-interface IImage {
-    id: number;
-    url: string;
-    title?: string;
-    //TODO: ad portrait orientation to JSON file and remove jumbotronUrl , image.jumbtronUrl
-    // portrait?: boolean;
-    jumbotronUrl?: string;
+export interface ImageFlexLayoutProps {
+    images: ImageType[];
+    withTitle?: boolean
+    portrait?: boolean
 }
 
-const ImageFlexLayout = () => {
-    const [images, setImages] = useState([]);
-
-    useEffect(() => {
-        const getImages = async () => {
-            const response = await axios.get(
-                'https://k2nstudio-api.herokuapp.com/items/'
-            );
-            setImages(response.data);
-        };
-
-        getImages();
-    }, []);
+const ImageFlexLayout = ({ images, withTitle = false, portrait }: ImageFlexLayoutProps) => {
 
     return (
         <div className={styles.flex}>
-            {images.map((image: IImage) => {
+            {images.map((image: ImageType) => {
                 return (
                     //!image.jumbotronUrl temporary validation, check align-items:baseline when original images will be added
-                    <div key={image.id} className={cx(styles.imageContainer, { [styles.portrait]: !image.jumbotronUrl })}>
-                        <h4>{image.title}</h4>
+                    <div key={image.id} className={cx(styles.imageContainer, { [styles.portrait]: portrait })}>
+                        {withTitle && <h4>{image.title}</h4>}
                         <Image
                             src={image.url}
                             alt={`image ${image.id}`}

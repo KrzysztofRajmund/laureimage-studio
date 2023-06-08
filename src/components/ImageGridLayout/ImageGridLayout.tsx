@@ -1,67 +1,24 @@
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import axios from 'axios';
-import placeholder from "../../../public/assets/placeholder.jpg";
+import { CSSProperties } from 'react';
+import placeholder from '../../../public/assets/placeholder.jpg';
+import { ImageType } from '../../screens/HomeScreen/HomeScreen';
 import styles from './ImageGridLayout.module.scss';
-
-
-interface IImage {
-    id: number;
-    url: string;
+export interface ImageGridLayoutProps {
+    images: ImageType[];
+    style?: CSSProperties;
+    title?: string;
 }
 
-const ImageGridLayout = () => {
-    const [images, setImages] = useState([]);
-
-    useEffect(() => {
-        const getImages = async () => {
-            const response = await axios.get(
-                'https://k2nstudio-api.herokuapp.com/items/'
-            );
-            setImages(response.data);
-        };
-        getImages();
-    }, []);
-
+const ImageGridLayout = ({ images, title, style }: ImageGridLayoutProps) => {
     return (
-        <div className={styles.grid}>
-            <h1 className={styles.title}>Portret modowy &amp; biznes</h1>
-            {images.slice(0, 12).map((image: IImage) => {
+        <div className={styles.grid} style={{ ...style }}>
+            {title && <h1 className={styles.title}>{title}</h1>}
+            {images.slice(0, 12).map((image: ImageType) => {
                 return (
                     <div key={image.id} className={styles.imageContainer}>
                         <Image
                             priority
-                            placeholder="blur"
-                            blurDataURL={placeholder.src}
-                            src={image.url}
-                            alt={`image ${image.id}`}
-                            layout='fill'
-                            objectFit='cover'
-                        />
-                    </div>
-                );
-            })}
-            <h1 className={styles.title}>Sesje portretowe &amp; wizerunkowe </h1>
-            {images.slice(0, 13).map((image: IImage) => {
-                return (
-                    <div key={image.id} className={styles.imageContainer}>
-                        <Image
-                            placeholder="blur"
-                            blurDataURL={placeholder.src}
-                            src={image.url}
-                            alt={`image ${image.id}`}
-                            layout='fill'
-                            objectFit='cover'
-                        />
-                    </div>
-                );
-            })}
-            <h1 className={styles.title}> Zdjęcia promocyjne </h1>
-            {images.slice(0, images.length + 1).map((image: IImage) => {
-                return (
-                    <div key={image.id} className={styles.imageContainer}>
-                        <Image
-                            placeholder="blur"
+                            placeholder='blur'
                             blurDataURL={placeholder.src}
                             src={image.url}
                             alt={`image ${image.id}`}
