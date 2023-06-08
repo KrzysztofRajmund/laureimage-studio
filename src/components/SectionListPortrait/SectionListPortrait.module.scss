@@ -10,34 +10,44 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
     margin: 15px;
+
+    @include desktopSmallDown {
+      margin: 5px 8px;
+    }
+
+    @include tabletDown() {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
 
     .imageContainer {
       position: relative;
-      width: 400px;
-      height: 600px;
+      width: 500px;
+      height: 700px;
       margin: 5px 15px;
 
-      @include desktopSmallDown {
-        margin: 5px 8px;
-      }
-
       @include desktopDown {
-        width: 300px;
-        height: 460px;
+        width: 425px;
+        height: 575px;
       }
 
       @include desktopSmallDown {
-        width: 285px;
-        height: 425px;
+        width: 325px;
+        height: 475px;
         margin: 5px 10px;
       }
 
-      @include phone {
+      @include tabletDown() {
+        width: 400px;
+        height: 600px;
+        margin: 45px 0px;
+      }
+
+      @include phone() {
         width: 325px;
         height: 400px;
-        margin: 10px 0px;
       }
 
       h4 {

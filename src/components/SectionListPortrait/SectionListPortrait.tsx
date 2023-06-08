@@ -19,7 +19,7 @@ const SectionListPortrait = ({
         <div className={styles.container}>
             {title && <h2 className={styles.title}>{title}</h2>}
             <div className={styles.flex}>
-                {images.map((image: ImageType) => {
+                {images.slice(0, 3).map((image: ImageType) => {
                     return (
                         <div
                             key={image.id}
