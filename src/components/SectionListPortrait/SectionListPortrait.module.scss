@@ -1,79 +1,90 @@
-@import '../../styles/utils.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
 
 .container {
   width: 100%;
+  margin: 10px 0px;
+
   .title {
+    color: $text-color-secondary;
+    margin: 0px 15px 20px;
+    width: 50%;
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    line-height: 5rem;
+
+    @include desktopSmallDown {
+      margin: 0px 10px 20px;
+    }
+
+    @include tabletDown() {
+      margin: 0px 15px 25px 45px;
+    }
+
+    @include phone {
+      font-size: 3.2rem;
+      margin: 0px 15px 10px;
+      width: 75%;
+    }
   }
 
   .flex {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 15px;
-
-    @include desktopSmallDown {
-      margin: 5px 8px;
-    }
 
     @include tabletDown() {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
     }
-
-    .imageContainer {
-      position: relative;
-      width: 500px;
-      height: 700px;
-      margin: 5px 15px;
-
-      @include desktopDown {
-        width: 425px;
-        height: 575px;
-      }
+    .content {
+      margin: 0px 15px;
 
       @include desktopSmallDown {
-        width: 325px;
-        height: 475px;
-        margin: 5px 10px;
+        margin: 0px 10px;
       }
 
       @include tabletDown() {
-        width: 400px;
-        height: 600px;
-        margin: 45px 0px;
+        margin: 45px 15px;
       }
 
-      @include phone() {
-        width: 325px;
-        height: 400px;
+      .imageContainer {
+        position: relative;
+        width: 500px;
+        height: 700px;
+
+        @include desktopDown {
+          width: 425px;
+          height: 575px;
+        }
+
+        @include desktopSmallDown {
+          width: 325px;
+          height: 475px;
+        }
+
+        @include tabletDown() {
+          width: 400px;
+          height: 600px;
+        }
+
+        @include phone() {
+          margin: 0 45px;
+        }
       }
 
       h4 {
-        z-index: 1;
-        pointer-events: none;
-        position: absolute;
-        top: 85%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        opacity: 0.7;
         width: 100%;
-        margin: 0;
+        pointer-events: none;
         font-family: $font-family-secondary;
-        text-transform: uppercase;
-        text-align: center;
-        background-color: $bg-color-secondary;
-        mix-blend-mode: screen;
-      }
+        margin-top: 25px;
+        text-align: right;
 
-      img {
-        transform: scale(1);
-        opacity: 1;
-        transition: opacity 0.3s ease-out, transform 0.2s ease-out;
-        &:hover {
-          z-index: 2;
-          opacity: 0.5;
-          transform: scale(1.2);
+        @include tabletDown() {
+          text-align: center;
         }
       }
     }

@@ -56,7 +56,7 @@ const HomeScreen = () => {
       <SectionImageWithContent title={contentTitle} image={contentImage} subtitle={contentSubtitle} imageDesc={contentImageDesc} />
       {/* <ImageGridLayout images={images} title='Fotografie studyjne' style={{ gridTemplateColumns: 'repeat(minmax(150px, 150px))', gridTemplateRows: '200px 200px 200px' }} /> */}
       {/* <ImageFlexLayout images={images} /> */}
-      <SectionListPortrait images={images} />
+      <SectionListPortrait images={images} withImageTitle={true} title='Piękne historie ślubne' />
     </div>
   );
 };

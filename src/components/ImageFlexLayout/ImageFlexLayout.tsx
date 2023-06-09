@@ -6,11 +6,11 @@ import { ImageType } from '../../screens/HomeScreen/HomeScreen';
 
 export interface ImageFlexLayoutProps {
     images: ImageType[];
-    withTitle?: boolean
+    withImageTitle?: boolean
     portrait?: boolean
 }
 
-const ImageFlexLayout = ({ images, withTitle = false, portrait }: ImageFlexLayoutProps) => {
+const ImageFlexLayout = ({ images, withImageTitle = false, portrait }: ImageFlexLayoutProps) => {
 
     return (
         <div className={styles.flex}>
@@ -18,7 +18,7 @@ const ImageFlexLayout = ({ images, withTitle = false, portrait }: ImageFlexLayou
                 return (
                     //!image.jumbotronUrl temporary validation, check align-items:baseline when original images will be added
                     <div key={image.id} className={cx(styles.imageContainer, { [styles.portrait]: portrait })}>
-                        {withTitle && <h4>{image.title}</h4>}
+                        {withImageTitle && <h4>{image.title}</h4>}
                         <Image
                             src={image.url}
                             alt={`image ${image.id}`}
