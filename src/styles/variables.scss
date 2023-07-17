@@ -1,19 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=IBM+Plex+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baskervville&family=IBM+Plex+Sans:wght@300&display=swap");
 
-//app paddings
-$app-padding-top: 80px;
-$app-padding-bottom: 80px;
-$app-padding-left: 45px;
-$app-padding-right: 45px;
+//app paddings desktop
+$app-padding-vertical: 80px;
+$app-padding-horizontal: 45px;
 
-//colors
+//app paddings mobile and tablet
+$app-padding-vertical-mobile: 40px;
+$app-padding-horizontal-mobile: 21px;
+
+//bg-colors
 $bg-color-primary: #fff;
 $bg-color-secondary: #f2f2f2;
-$text-color-secondary: #444;
+
+//text-colors
+$text-color-primary: #444;
+$text-color-secondary: #383a41;
+$text-color-white: #f2f2f2;
 
 //font-family
-$font-family-main: 'Baskervville', serif;
-$font-family-secondary: 'IBM Plex Sans', sans-serif;
+$font-family-main: "Baskervville", serif;
+$font-family-secondary: "IBM Plex Sans", sans-serif;
 
 //screens
 $desktop-max-width: 1399px;

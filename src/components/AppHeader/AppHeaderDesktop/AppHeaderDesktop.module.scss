@@ -1,5 +1,5 @@
-@import '../../../styles/utils.scss';
-@import '../../../styles/variables.scss';
+@import "../../../styles/utils.scss";
+@import "../../../styles/variables.scss";
 
 .container {
   z-index: 100;
@@ -10,8 +10,7 @@
   align-items: center;
   width: 100%;
   min-height: 90px;
-  padding: $app-padding-top / 2 $app-padding-right $app-padding-bottom / 2
-    $app-padding-left;
+  padding: $app-padding-vertical / 2 $app-padding-horizontal;
   background: linear-gradient(to bottom, $bg-color-primary, transparent);
   background-color: $bg-color-primary;
   transition: background 0.3s ease-out;

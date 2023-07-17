@@ -1,21 +1,23 @@
-@import '../../styles/utils.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
 
 .container {
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  padding: $app-padding-top * 2 $app-padding-right $app-padding-bottom * 2
-    $app-padding-left;
+  padding: $app-padding-vertical * 2 $app-padding-horizontal * 2;
   width: 100%;
-  color: $text-color-secondary;
+  color: $text-color-primary;
+
+  @include tabletDown {
+    padding: $app-padding-vertical / 2 0;
+  }
 
   @include phone {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: $app-padding-top / 2 0 $app-padding-bottom/2 0;
   }
 
   h2,

@@ -1,5 +1,5 @@
-@import '../../../styles/utils.scss';
-@import '../../../styles/variables.scss';
+@import "../../../styles/utils.scss";
+@import "../../../styles/variables.scss";
 
 .text {
   font-size: 1rem;
@@ -15,8 +15,7 @@
   width: 100%;
   min-height: 45px;
   background-color: $bg-color-primary;
-  padding: $app-padding-top / 2 $app-padding-right / 2 $app-padding-bottom / 2
-    $app-padding-left / 2;
+  padding: $app-padding-vertical-mobile $app-padding-horizontal-mobile;
 
   @include tabletDown {
     display: inline-flex;
@@ -26,7 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    padding: 1.5rem;
+    padding: $app-padding-vertical-mobile / 2 $app-padding-horizontal-mobile;
   }
 
   .title,
@@ -47,14 +46,14 @@
   position: fixed;
   top: 15%;
   left: 0;
-  padding: $app-padding-top / 2 $app-padding-right / 2 $app-padding-bottom / 2
-    $app-padding-left;
+  padding: $app-padding-vertical $app-padding-horizontal;
   opacity: 0;
   background: transparent;
   transition: all 0.3s ease-out;
 
   @include tabletDown {
     display: flex;
+    padding: $app-padding-vertical-mobile $app-padding-horizontal-mobile;
   }
 
   &.show {
