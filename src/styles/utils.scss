@@ -40,7 +40,10 @@
   letter-spacing: 0.1rem;
   color: $headerTextColor;
   line-height: 6.5rem;
-  //mobile
+  //mobile and tablet
+  @include tabletDown {
+    line-height: 5.5rem;
+  }
   @include phone {
     line-height: 5rem;
   }
@@ -52,6 +55,10 @@
   letter-spacing: 0.3rem;
   color: $text-color-primary;
   line-height: 5rem;
+  //mobile and tablet
+  @include tabletDown {
+    line-height: 4rem;
+  }
 }
 
 @mixin subtitle {

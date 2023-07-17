@@ -52,15 +52,20 @@
 
         @include desktopDown {
           width: 350px;
-          height: 525px;
+          height: 575px;
         }
 
         @include desktopSmallDown {
-          width: 270px;
-          height: 375px;
+          width: 272px;
+          height: 445px;
         }
 
         @include tabletDown {
+          width: 500px;
+          height: 675px;
+        }
+
+        @include phone {
           width: 100vw;
           height: 600px;
         }
@@ -73,11 +78,8 @@
         pointer-events: none;
         font-family: $font-family-secondary;
         margin-top: 21px;
+        padding-right: 0.1rem;
         text-align: right;
-
-        @include desktopSmallDown {
-          padding-right: 0.2rem;
-        }
 
         @include tabletDown {
           text-align: center;
