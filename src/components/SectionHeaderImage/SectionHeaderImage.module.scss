@@ -20,7 +20,8 @@
   }
 
   h1,
-  .icon {
+  .icon,
+  .logo {
     z-index: 1;
     position: absolute;
   }
@@ -43,11 +44,17 @@
       top: 45%;
       opacity: 1;
     }
-  }
+}
 
   .icon {
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .logo {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

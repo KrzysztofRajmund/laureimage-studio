@@ -1,0 +1,26 @@
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
+
+.container {
+  .title {
+    @include title;
+    display: none;
+
+    @include phone {
+      display: block;
+      padding: 0 $app-padding-horizontal-mobile;
+      margin-top: 0;
+    }
+  }
+
+  .description {
+    @include description;
+    text-align: justify;
+    margin: 0;
+    padding: 0 $app-padding-horizontal;
+
+    @include phone {
+      padding: 0 $app-padding-horizontal-mobile;
+    }
+  }
+}
