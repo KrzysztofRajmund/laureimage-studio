@@ -35,6 +35,8 @@
 
     @include phone {
       left: 5%;
+      width: 85%;
+      font-size: 3.5rem;
     }
 
     &.animate {
