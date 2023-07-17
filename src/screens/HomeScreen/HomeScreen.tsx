@@ -11,7 +11,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import SectionListPortrait from '../../components/SectionListPortrait';
 import { useResponsive } from '../../utils/hooks';
-import { ScreenSize } from '../../utils/enums';
 
 export type ImageType = {
   id: number;
