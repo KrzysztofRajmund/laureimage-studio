@@ -14,7 +14,7 @@
       margin: 0px 10px 20px;
     }
 
-    @include tabletDown() {
+    @include tabletDown {
       margin: 0px 15px 25px 45px;
     }
 
@@ -29,7 +29,7 @@
     justify-content: space-around;
     align-items: center;
 
-    @include tabletDown() {
+    @include tabletDown {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -41,32 +41,28 @@
         margin: 0px 10px;
       }
 
-      @include tabletDown() {
-        margin: 45px 15px;
+      @include tabletDown {
+        margin: 45px 0px;
       }
 
       .imageContainer {
         position: relative;
-        width: 500px;
+        width: 445px;
         height: 700px;
 
         @include desktopDown {
-          width: 425px;
-          height: 575px;
+          width: 350px;
+          height: 525px;
         }
 
         @include desktopSmallDown {
-          width: 325px;
-          height: 475px;
+          width: 270px;
+          height: 375px;
         }
 
-        @include tabletDown() {
-          width: 400px;
+        @include tabletDown {
+          width: 100vw;
           height: 600px;
-        }
-
-        @include phone() {
-          margin: 0 45px;
         }
       }
 
@@ -76,10 +72,14 @@
         width: 100%;
         pointer-events: none;
         font-family: $font-family-secondary;
-        margin-top: 25px;
+        margin-top: 21px;
         text-align: right;
 
-        @include tabletDown() {
+        @include desktopSmallDown {
+          padding-right: 0.2rem;
+        }
+
+        @include tabletDown {
           text-align: center;
         }
       }

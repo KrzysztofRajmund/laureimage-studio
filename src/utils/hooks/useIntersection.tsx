@@ -1,7 +1,7 @@
 import { RefObject, useEffect, useState } from 'react';
 
 //useIntersaction: better & cleaner way to check if element is in view (useInView.isInView deprecated!!!)
-const useIntersection = (
+export const useIntersection = (
     ref: RefObject<HTMLDivElement>,
     offset = '0px',
     delay = 0
@@ -29,5 +29,3 @@ const useIntersection = (
 
     return isVisible;
 };
-
-export default useIntersection;
