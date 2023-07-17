@@ -32,7 +32,7 @@ const SectionListPortrait = ({
                   objectFit="cover"
                 />
               </div>
-              {withImageTitle && <h4>'image.title'</h4>}
+              {withImageTitle && <p>image.title</p>}
             </div>
           );
         })}

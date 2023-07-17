@@ -4,7 +4,7 @@ import styles from './FooterMiddle.module.scss';
 const FooterMiddle = () => {
     return (
         <div className={styles.container}>
-            <h2>Laureimage</h2>
+            <h4>Laureimage</h4>
             <SocialMedia />
             <p>
                 Na zdjęciach staram się zawsze zatrzymać dla Państwa chwile i emocje z

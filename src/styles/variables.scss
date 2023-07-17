@@ -1,28 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Baskervville&family=IBM+Plex+Sans:wght@300&display=swap");
 
-//app paddings desktop
-$app-padding-vertical: 80px;
-$app-padding-horizontal: 45px;
-
-//app paddings mobile and tablet
-$app-padding-vertical-mobile: 40px;
-$app-padding-horizontal-mobile: 21px;
-
-//bg-colors
-$bg-color-primary: #fff;
-$bg-color-secondary: #f2f2f2;
-
-//text-colors
-$text-color-primary: #444;
-$text-color-secondary: #383a41;
-$text-color-white: #f2f2f2;
-
-//font-family
+//Font-family
 $font-family-main: "Baskervville", serif;
 $font-family-secondary: "IBM Plex Sans", sans-serif;
 
-//screens
+//Screens
 $desktop-max-width: 1399px;
 $desktop-small-max-width: 1099px;
 $tablet-max-width: 850px;
 $phone-max-width: 499px;
+
+//App paddings desktop
+$app-padding-vertical: 80px;
+$app-padding-horizontal: 45px;
+
+//App paddings mobile and tablet
+$app-padding-vertical-mobile: 40px;
+$app-padding-horizontal-mobile: 21px;
+
+//Bg-colors
+$bg-color-primary: #fff;
+$bg-color-secondary: #f2f2f2;
+
+//Text-colors
+$text-color-primary: #444;
+$text-color-secondary: #383a41;
+$text-color-white: #f2f2f2;
+$text-color-black: #000;
+
+//Font-size desktop
+$header-font-size: 5rem;
+$title-font-size: 3.5rem;
+$subtitle-font-size: 1.5rem;
+$label-font-size: 1.2rem;
+$description-font-size: 1rem;
+
+//Font-size mobile tablet
+$header-font-size-mobile: 4rem;
+$title-font-size-mobile: 3.2rem;
+$subtitle-font-size-mobile: 1.5rem;
+$label-font-size-mobile: 1.1rem;
+$description-font-size-mobile: 1.2rem;

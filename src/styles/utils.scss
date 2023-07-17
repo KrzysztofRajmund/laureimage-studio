@@ -1,6 +1,6 @@
-@import './variables.scss';
+@import "./variables.scss";
 
-//screens
+//Screens
 @mixin desktopDown() {
   @media screen and (max-width: $desktop-max-width) {
     @content;
@@ -26,15 +26,68 @@
   }
 }
 
-//flex
+//Flex
 @mixin flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-//text
-@mixin textDefault {
+//Typography
+@mixin header($headerTextColor) {
+  font-size: $header-font-size;
   font-weight: 400;
   letter-spacing: 0.1rem;
+  color: $headerTextColor;
+  line-height: 6.5rem;
+  //mobile and tablet
+  @include tabletDown {
+    font-size: $header-font-size-mobile;
+    line-height: 5rem;
+  }
+}
+
+@mixin title {
+  font-size: $title-font-size;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  color: $text-color-primary;
+  line-height: 5rem;
+  //mobile and tablet
+  @include tabletDown {
+    font-size: $title-font-size-mobile;
+  }
+}
+
+@mixin subtitle {
+  font-size: $subtitle-font-size;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  color: $text-color-primary;
+  //mobile and tablet
+  @include tabletDown {
+    font-size: $subtitle-font-size-mobile;
+  }
+}
+
+@mixin label {
+  font-size: $label-font-size;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: $text-color-secondary;
+  //mobile and tablet
+  @include tabletDown {
+    font-size: $label-font-size-mobile;
+  }
+}
+
+@mixin description {
+  font-size: $description-font-size;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: $text-color-secondary;
+  //mobile and tablet
+  @include tabletDown {
+    font-size: $description-font-size-mobile;
+  }
 }

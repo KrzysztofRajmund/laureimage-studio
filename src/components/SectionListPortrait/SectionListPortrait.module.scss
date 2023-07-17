@@ -6,13 +6,9 @@
   margin: 10px 0px;
 
   .title {
-    color: $text-color-secondary;
+    @include title;
     margin: 0px 15px 20px;
     width: 50%;
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing: 0.3rem;
-    line-height: 5rem;
 
     @include desktopSmallDown {
       margin: 0px 10px 20px;
@@ -23,7 +19,6 @@
     }
 
     @include phone {
-      font-size: 3.2rem;
       margin: 0px 15px 10px;
       width: 75%;
     }
@@ -75,7 +70,8 @@
         }
       }
 
-      h4 {
+      p {
+        @include description;
         opacity: 0.7;
         width: 100%;
         pointer-events: none;

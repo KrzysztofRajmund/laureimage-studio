@@ -8,7 +8,6 @@
   align-items: flex-end;
   padding: $app-padding-vertical * 2 $app-padding-horizontal * 2;
   width: 100%;
-  color: $text-color-primary;
 
   @include tabletDown {
     padding: $app-padding-vertical / 2 0;
@@ -27,21 +26,17 @@
   }
 
   h2 {
+    @include title;
     z-index: 1;
     opacity: 0;
     position: absolute;
     top: 25%;
     left: 10%;
     width: 50%;
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing: 0.3rem;
-    line-height: 5rem;
     transition: all 0.3s linear;
 
     @include phone {
       left: 5%;
-      font-size: 3.2rem;
       width: 100%;
     }
 
@@ -52,13 +47,10 @@
   }
 
   h4 {
+    @include subtitle;
     opacity: 0;
     flex: 1 0 20%;
     padding-right: 1.2rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 0.3rem;
-    line-height: 1.8rem;
     text-transform: uppercase;
     transform: translateY(50%);
     transition: all 0.3s linear;
@@ -109,6 +101,7 @@
     }
 
     .imageContent {
+      @include description;
       position: absolute;
       bottom: -5%;
       width: 100%;

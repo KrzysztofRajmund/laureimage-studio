@@ -1,4 +1,5 @@
-@import '../../../styles/utils.scss';
+@import "../../../styles/utils.scss";
+@import "../../../styles/variables.scss";
 
 .container {
   text-align: center;
@@ -8,16 +9,16 @@
     width: 100%;
   }
 
-  h2 {
-    @include textDefault;
+  h4 {
+    font-weight: 400;
+    letter-spacing: 0.1rem;
     font-size: 1rem;
     text-transform: uppercase;
+    color: $text-color-secondary;
   }
 
   p {
+    @include description;
     text-align: justify;
-    @include tabletDown {
-      font-size: 1.5rem;
-    }
   }
 }

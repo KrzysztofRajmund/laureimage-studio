@@ -33,7 +33,8 @@
     @extend .text;
   }
   .logo {
-    @include textDefault;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
     height: auto;
     margin-left: 2rem;
   }
