@@ -15,7 +15,7 @@
   width: 100%;
   min-height: 45px;
   background-color: $bg-color-primary;
-  padding: $app-padding-vertical-mobile $app-padding-horizontal-mobile;
+  padding: $app-padding-vertical-mobile / 2 $app-padding-horizontal-mobile;
 
   @include tabletDown {
     display: inline-flex;
@@ -25,7 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    padding: $app-padding-vertical-mobile / 2 $app-padding-horizontal-mobile;
+    padding: $app-padding-vertical-mobile / 4 $app-padding-horizontal-mobile;
   }
 
   .title,
@@ -47,14 +47,13 @@
   position: fixed;
   top: 15%;
   left: 0;
-  padding: $app-padding-vertical $app-padding-horizontal;
+  padding: $app-padding-vertical-mobile / 2 $app-padding-horizontal-mobile;
   opacity: 0;
   background: transparent;
   transition: all 0.3s ease-out;
 
   @include tabletDown {
     display: flex;
-    padding: $app-padding-vertical-mobile $app-padding-horizontal-mobile;
   }
 
   &.show {
