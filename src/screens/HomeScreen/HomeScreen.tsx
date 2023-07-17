@@ -9,6 +9,7 @@ import ImageGridLayout from '../../components/ImageGridLayout';
 import ImageFlexLayout from '../../components/ImageFlexLayout';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import SectionListPortrait from '../../components/SectionListPortrait';
 
 export type ImageType = {
   id: number;
@@ -54,7 +55,8 @@ const HomeScreen = () => {
       <SectionHeaderImage title={headerTitle} image={headerImage} icon={<ArrowJump arrowDown containerStyle={headerArrowStyle} />} />
       <SectionImageWithContent title={contentTitle} image={contentImage} subtitle={contentSubtitle} imageDesc={contentImageDesc} />
       {/* <ImageGridLayout images={images} title='Fotografie studyjne' style={{ gridTemplateColumns: 'repeat(minmax(150px, 150px))', gridTemplateRows: '200px 200px 200px' }} /> */}
-      <ImageFlexLayout images={images} />
+      {/* <ImageFlexLayout images={images} /> */}
+      <SectionListPortrait images={images} withImageTitle={true} title='Piękne historie ślubne' />
     </div>
   );
 };
