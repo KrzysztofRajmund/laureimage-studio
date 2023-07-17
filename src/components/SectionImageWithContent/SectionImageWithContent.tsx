@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { CSSProperties, useRef } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { useIntersection } from '../../utils/hooks';
 import cx from 'classnames';
@@ -19,7 +19,7 @@ const SectionImageWithContent = ({
     image,
     title,
     subtitle,
-    imageDesc,
+    imageDesc
 }: ISectionImageWithContent) => {
     const imageRef = useRef(null);
     const subtitleRef = useRef(null);
@@ -29,10 +29,10 @@ const SectionImageWithContent = ({
     const isTitleInView = useIntersection(titleRef);
 
     return (
-        <section className={styles.container}>
+        <section className={styles.container} >
             <h2 className={cx({ [styles.animate]: isTitleInView })} ref={titleRef}>{title}</h2>
             <h4 className={cx({ [styles.animate]: isSubtitleInView })} ref={subtitleRef}>{subtitle}</h4>
-            <div className={cx(styles.image, { [styles.animate]: isImageInView })} ref={imageRef}>
+            <div className={cx(styles.image, { [styles.animate]: isImageInView })} ref={imageRef} >
                 <Image
                     priority
                     src={image}

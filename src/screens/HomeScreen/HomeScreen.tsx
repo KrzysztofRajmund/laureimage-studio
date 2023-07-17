@@ -10,6 +10,7 @@ import ImageFlexLayout from '../../components/ImageFlexLayout';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import SectionListPortrait from '../../components/SectionListPortrait';
+import { useResponsive } from '../../utils/hooks';
 
 export type ImageType = {
   id: number;
@@ -21,15 +22,16 @@ export type ImageType = {
 }
 
 const HomeScreen = () => {
+ const {isMobileScreen} = useResponsive();
 
-  const contentTitle = 'Modernistyczna Fotografia Ślubna';
+  const contentTitle = isMobileScreen ?  'Modernistyczna Fotografia' : 'Modernistyczna Fotografia Ślubna';
   const contentSubtitle = 'Wasze Piękne Historie';
   const contentImageDesc = {
     desc: 'Romantyczne. Piękne. Nowoczesne.',
     actionButton: <CustomLink href='portfolio'>Historie ślubne &gt;&gt;</CustomLink>,
   }
 
-  const headerTitle = 'Modernistyczna Fotografia Ślubna';
+  const headerTitle = isMobileScreen ?  'Modernistyczna Fotografia' : 'Modernistyczna Fotografia Ślubna';
   const headerArrowStyle = {
     backgroundColor: 'transparent',
     width: '65px',

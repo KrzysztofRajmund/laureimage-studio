@@ -1,4 +1,3 @@
-import useIntersection from './useIntersection';
-import useInView from './useInView';
-
-export {useIntersection, useInView};
+export { useIntersection } from "./useIntersection";
+export { useInView } from "./useInView";
+export { useResponsive } from "./useResponsive";

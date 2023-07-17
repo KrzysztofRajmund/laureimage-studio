@@ -1,4 +1,4 @@
-import { ScreenSize } from '../enums/screenSize';
+import { ScreenSize } from "../enums/";
 
 const base = 16;
 

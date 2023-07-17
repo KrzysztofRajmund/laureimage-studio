@@ -1,11 +1,11 @@
-@import '../../styles/variables.scss';
-@import '../../styles/utils.scss';
+@import "../../styles/variables.scss";
+@import "../../styles/utils.scss";
 
 .container {
   position: relative;
-  width: 35px;
-  height: 35px;
-  background-color: #000;
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: $text-color-black;
   border-radius: 50%;
 
   @include desktopSmallDown {
@@ -22,8 +22,8 @@
     left: 50%;
     height: 35%;
     width: 35%;
-    border-top: 2px solid $bg-color-secondary;
-    border-left: 2px solid $bg-color-secondary;
+    border-top: 2px solid $text-color-white;
+    border-left: 2px solid $text-color-white;
     transform: rotate(45deg) translateY(75%);
     animation: arrowUp 1s infinite;
   }

@@ -1,11 +1,11 @@
-@import '../../../styles/utils.scss';
-@import '../../../styles/variables.scss';
+@import "../../../styles/utils.scss";
+@import "../../../styles/variables.scss";
 
 .container {
   z-index: 100;
   position: fixed;
-  top: $app-padding-top * 0.55;
-  left: $app-padding-left;
+  top: $app-padding-vertical * 0.45;
+  left: $app-padding-horizontal;
   display: none;
   flex-direction: column;
   justify-content: space-between;

@@ -1,6 +1,6 @@
 import { MutableRefObject, useEffect, useState } from 'react';
 
-const useInView = (
+export const useInView = (
     ref: MutableRefObject<HTMLDivElement | null>,
     offset = 0
 ) => {
@@ -35,5 +35,3 @@ const useInView = (
 
     return { justScrolledBy, isInView };
 };
-
-export default useInView;

@@ -1,16 +1,15 @@
-@import '../../styles/variables.scss';
-@import '../../styles/utils.scss';
+@import "../../styles/variables.scss";
+@import "../../styles/utils.scss";
 
 .footer {
-  min-height: 200vh;
+  min-height: 50vh;
   @include flexCenter;
   flex-direction: column;
   width: 100%;
-  padding: $app-padding-top $app-padding-right $app-padding-bottom / 2
-    $app-padding-left;
+  padding: $app-padding-vertical $app-padding-horizontal;
 
-  @include phone {
-    padding: 6rem 1rem 4rem 1rem;
+  @include tabletDown {
+    padding: $app-padding-vertical-mobile $app-padding-horizontal-mobile;
   }
 
   .footerTop {
@@ -24,9 +23,10 @@
   .footerBottom {
     width: 100%;
     font-family: $font-family-secondary;
+    color: $text-color-secondary;
     font-weight: 900;
     text-align: end;
     text-transform: uppercase;
-    border-top: 1px solid #000;
+    border-top: 1px solid $text-color-black;
   }
 }

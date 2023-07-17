@@ -1,5 +1,5 @@
-@import '../../styles/utils.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
 
 .container {
   opacity: 0;
@@ -26,20 +26,17 @@
   }
 
   h1 {
-    @include textDefault;
+    @include header($text-color-white);
     opacity: 0;
     bottom: 75%;
     left: 10%;
     width: 50%;
-    color: $bg-color-secondary;
-    font-size: 5rem;
-    line-height: 6.5rem;
     transition: all 0.3s linear;
 
     @include phone {
       left: 5%;
-      font-size: 4rem;
-      line-height: 5rem;
+      width: 85%;
+      font-size: 3.5rem;
     }
 
     &.animate {
