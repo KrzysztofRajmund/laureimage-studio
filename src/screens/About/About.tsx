@@ -6,9 +6,9 @@ import styles from './About.module.scss';
 import CustomLink from "../../components/CustomLink";
 
 const About = () => {
-  const title = "Title about bahhaa"
+  const title = "Moje fotografie"
   const contentImageDesc = {
-    desc: "Portret 2022",
+    desc: "Portret 2021",
     actionButton: <CustomLink href='kontakt'>Contact &gt;&gt;</CustomLink>,
   };
 

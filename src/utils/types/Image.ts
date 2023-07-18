@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type ImageType = {
   id: number;
   url: string;
@@ -10,6 +12,6 @@ export type ImageType = {
 //NOTE: Probably temporary json ImageType
 export type ImageTypeJSON = {
   id: number | string;
-  url: string;
+  url: string | StaticImageData;
   title?: string;
 };

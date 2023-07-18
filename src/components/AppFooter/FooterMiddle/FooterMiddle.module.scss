@@ -4,9 +4,14 @@
 .container {
   text-align: center;
   width: 75%;
+  min-width: 300px;
 
   @include tabletDown {
     width: 100%;
+  }
+
+  @include phone {
+    min-width: 200px;
   }
 
   h4 {

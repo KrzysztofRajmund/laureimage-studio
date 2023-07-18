@@ -1,6 +1,12 @@
-@import '../../styles/utils.scss';
+@import "../../styles/utils.scss";
 
 .container {
+  min-width: 300px;
+
+  @include phone {
+    min-width: 200px;
+  }
+
   a {
     margin: 0 0.5rem;
     padding: 0.5rem;
