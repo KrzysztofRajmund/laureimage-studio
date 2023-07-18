@@ -9,7 +9,7 @@ const About = () => {
   const title = "Title about bahhaa"
   const contentImageDesc = {
     desc: "Portret 2022",
-    actionButton: <CustomLink href='portfolio'>Contact &gt;&gt;</CustomLink>,
+    actionButton: <CustomLink href='kontakt'>Contact &gt;&gt;</CustomLink>,
   };
 
   return (

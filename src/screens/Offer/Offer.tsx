@@ -33,19 +33,18 @@ const Offer = () => {
       desc: "Portrety Pary Młodej ułożone w historie z dnia pleneru",
       img: contentImage,
       list: [
-        "portrety Pary Młodej ułożone w historie z dnia pleneru",
         "min. 70 wyedytowanych i wyretuszowanych zdjęć",
         "online gallery",
       ],
     },
     {
       title: "Album: 400-600 zł",
-      desc: "Portrety Pary Młodej ułożone w historie z dnia pleneru",
+      desc: "Deluxe album z wybranymi zdjęciami",
       img: contentImage,
     },
     {
       title: "Sesja zaręczynowa: 500 zł",
-      desc: "Portrety Pary Młodej ułożone w historie z dnia pleneru",
+      desc: "Portrety oraz urozmaicone kadry ułożone w historie",
       img: contentImage,
     },
   ];
