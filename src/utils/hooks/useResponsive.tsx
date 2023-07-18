@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { ScreenSize } from "../enums";
+import { isBrowser } from "../helpers";
 
 export const useResponsive = () => {
   const [windowWidth, setWindowWidth] = useState<number>(0);
   
   useEffect(() => {
+    if (!isBrowser()) return
     setWindowWidth(window.innerWidth)
 
     const handleResize = () => setWindowWidth(window.innerWidth)

@@ -1,0 +1,80 @@
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: $app-padding-vertical $app-padding-horizontal;
+
+  @include tabletDown {
+    flex-direction: column;
+    @include flexCenter;
+    padding: $app-padding-vertical-mobile $app-padding-horizontal-mobile;
+  }
+
+  .textContent {
+    flex: 1;
+    padding-right: 3rem;
+    text-align: right;
+
+    @include tabletDown {
+      padding-right: 0;
+      text-align: center;
+    }
+
+    &.reversed {
+      padding-right: 0;
+      padding-left: 3rem;
+      text-align: left;
+
+      @include tabletDown {
+        padding-top: 3rem;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+
+    .title {
+      @include title;
+      line-height: normal;
+      margin-top: 0;
+    }
+
+    .description {
+      @include description;
+      text-align: justify;
+
+      &.short {
+        text-align: inherit;
+      }
+
+      @include tabletDown {
+        text-align: justify;
+      }
+    }
+
+    ul {
+      @include description;
+      text-align: left;
+    }
+  }
+
+  .image {
+    position: relative;
+    width: 345px;
+    height: 475px;
+
+    @include tabletDown {
+      width: 75%;
+      height: 525px;
+      margin-top: 3rem;
+    }
+
+    @include phone {
+      width: 100%;
+      height: 475px;
+      margin-top: 2.5rem;
+    }
+  }
+}

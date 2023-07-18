@@ -34,8 +34,8 @@ const AppHeaderTabletMobile = () => {
         <CustomLink href='/onas'>
           O nas
         </CustomLink>
-        <CustomLink href='/pakiety'>
-          Pakiety
+        <CustomLink href='/oferta'>
+          Oferta
         </CustomLink>
         <CustomLink href='/kontakt'>
           Kontakt

@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
-import contentImage from "../../../public/assets/aboutscreen-content-image.jpg";
+import contentImage from "../../../public/assets/about-screen-content-image.jpg";
 import SectionImageWithContent from "../../components/SectionImageWithContent";
 import styles from './About.module.scss';
 import CustomLink from "../../components/CustomLink";
@@ -9,7 +9,7 @@ const About = () => {
   const title = "Title about bahhaa"
   const contentImageDesc = {
     desc: "Portret 2022",
-    actionButton: <CustomLink href='portfolio'>Contact &gt;&gt;</CustomLink>,
+    actionButton: <CustomLink href='kontakt'>Contact &gt;&gt;</CustomLink>,
   };
 
   return (

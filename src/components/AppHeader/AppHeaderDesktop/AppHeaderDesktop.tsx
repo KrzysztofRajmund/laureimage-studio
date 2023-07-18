@@ -28,8 +28,8 @@ export const AppHeaderDesktop = () => {
         <CustomLink href='/onas' activeLinkStyle='underline'>
           O nas
         </CustomLink>
-        <CustomLink href='/pakiety' activeLinkStyle='underline'>
-          Pakiety
+        <CustomLink href='/oferta' activeLinkStyle='underline'>
+          Oferta
         </CustomLink>
         <CustomLink href='/kontakt' activeLinkStyle='underline'>
           Kontakt
