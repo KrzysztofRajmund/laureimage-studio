@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
 import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
-import headerImage from "../../../public/assets/home-screen-header-image.jpg";
+import headerImage from "../../../public/assets/offer-screen-header-image.jpg";
 import contentImage from "../../../public/assets/offer-screen-content-image.jpg";
 import styles from "./Offer.module.scss";
 import { useResponsive } from "../../utils/hooks";
