@@ -44,10 +44,11 @@
   z-index: 100;
   display: none;
   flex-direction: column;
+  justify-content: center;
   position: fixed;
   top: 15%;
   left: 0;
-  padding: $app-padding-vertical-mobile / 2 $app-padding-horizontal-mobile;
+  padding: 6px $app-padding-horizontal-mobile;
   opacity: 0;
   background: transparent;
   transition: all 0.3s ease-out;
@@ -63,7 +64,8 @@
 
   a {
     @extend .text;
-    padding-bottom: 1.2rem;
+    padding: 12px 0;
+    margin: 4px 0;
     opacity: 1;
     transition: opacity 0.3s linear;
 

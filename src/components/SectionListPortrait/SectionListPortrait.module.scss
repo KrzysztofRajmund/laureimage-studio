@@ -67,7 +67,7 @@
 
         @include phone {
           width: 100vw;
-          height: 600px;
+          height: 550px;
         }
       }
 
@@ -83,6 +83,7 @@
 
         @include tabletDown {
           text-align: center;
+          text-transform: uppercase;
         }
       }
     }

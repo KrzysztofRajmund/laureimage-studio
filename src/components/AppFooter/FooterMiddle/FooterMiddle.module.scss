@@ -16,10 +16,14 @@
 
   h4 {
     font-weight: 400;
-    letter-spacing: 0.1rem;
     font-size: 1rem;
     text-transform: uppercase;
+    letter-spacing: 0.1rem;
     color: $text-color-secondary;
+
+    @include phone {
+      margin-bottom: 35px;
+    }
   }
 
   p {
