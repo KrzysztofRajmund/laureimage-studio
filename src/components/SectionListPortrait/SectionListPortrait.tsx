@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import placeholder from "../../../public/assets/placeholder.jpg";
 import styles from "./SectionListPortrait.module.scss";
-import { ImageType } from "../../screens/HomeScreen/HomeScreen";
+import { ImageType } from "../../utils/types";
 
 export interface SectionListPortraitProps {
   images: ImageType[];

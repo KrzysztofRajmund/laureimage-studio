@@ -1,0 +1,24 @@
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
+
+$text-content-padding-right: 24px;
+
+.container {
+  @include flexCenter;
+  flex-direction: column;
+  padding: 0 $app-padding-horizontal $app-padding-vertical;
+
+  @include tabletDown {
+    padding: 0 $app-padding-horizontal-mobile $app-padding-vertical-mobile;
+  }
+
+  .description {
+    width: 75%;
+    transform: translateX($text-content-padding-right);
+
+    @include tabletDown {
+      width: 85%;
+      transform: translateX(0);
+    }
+  }
+}

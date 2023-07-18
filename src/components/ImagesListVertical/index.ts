@@ -1,0 +1,1 @@
+export { ImagesListVertical } from "./ImagesListVertical";

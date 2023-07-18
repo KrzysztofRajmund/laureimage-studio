@@ -12,15 +12,6 @@ import axios from 'axios';
 import SectionListPortrait from '../../components/SectionListPortrait';
 import { useResponsive } from '../../utils/hooks';
 
-export type ImageType = {
-  id: number;
-  url: string;
-  title?: string;
-  //TODO: ad portrait orientation to JSON file and remove jumbotronUrl , image.jumbtronUrl
-  portrait?: boolean;
-  jumbotronUrl?: string;
-}
-
 const HomeScreen = () => {
  const {isMobileScreen} = useResponsive();
 

@@ -1,0 +1,24 @@
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
+
+$socialmedia-padding-margin-horizontal: 16px;
+
+.container {
+  position: relative;
+  .socialmedia {
+    position: absolute;
+    top: 50%;
+    padding-left: $app-padding-horizontal -
+      $socialmedia-padding-margin-horizontal;
+
+    @include desktopSmallDown {
+      top: 45%;
+    }
+
+    @include tabletDown {
+      top: 3%;
+      padding-left: $app-padding-horizontal-mobile -
+        $socialmedia-padding-margin-horizontal;
+    }
+  }
+}
