@@ -2,8 +2,8 @@ import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
 import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
-import headerImage from "../../../public/assets/contact-screen-header-image.jpg";
-import contentImage from "../../../public/assets/contact-screen-content-image.jpg";
+import headerImage from "../../../public/static/assets/contact-screen-header-image.jpg";
+import contentImage from "../../../public/static/assets/contact-screen-content-image.jpg";
 import styles from "./Contact.module.scss";
 import SocialMedia from "../../components/SocialMedia";
 

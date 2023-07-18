@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import placeholder from '../../../public/assets/placeholder.jpg';
+import placeholder from '../../../public/static/assets/placeholder.jpg';
 import cx from 'classnames';
 import styles from './ImageFlexLayout.module.scss';
 import { ImageType } from '../../utils/types';

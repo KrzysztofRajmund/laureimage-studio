@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { CSSProperties } from 'react';
-import placeholder from '../../../public/assets/placeholder.jpg';
+import placeholder from '../../../public/static/assets/placeholder.jpg';
 import styles from './ImageGridLayout.module.scss';
 import { ImageType } from '../../utils/types';
 export interface ImageGridLayoutProps {

@@ -2,11 +2,11 @@ import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
 import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
-import headerImage from "../../../public/assets/offer-screen-header-image-2.jpg";
-import contentImageOne from "../../../public/assets/offer-screen-content-image-1.jpg";
-import contentImageTwo from "../../../public/assets/offer-screen-content-image-2-1.jpg";
-import contentImageThree from "../../../public/assets/offer-screen-content-image-3.jpg";
-import contentImageFour from "../../../public/assets/offer-screen-content-image-4.jpg";
+import headerImage from "../../../public/static/assets/offer-screen-header-image-2.jpg";
+import contentImageOne from "../../../public/static/assets/offer-screen-content-image-1.jpg";
+import contentImageTwo from "../../../public/static/assets/offer-screen-content-image-2-1.jpg";
+import contentImageThree from "../../../public/static/assets/offer-screen-content-image-3.jpg";
+import contentImageFour from "../../../public/static/assets/offer-screen-content-image-4.jpg";
 import styles from "./Offer.module.scss";
 import { useResponsive } from "../../utils/hooks";
 

@@ -4,7 +4,7 @@ import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
 import { ImagesListVertical } from "../../components/ImagesListVertical";
 import dataImages from '../../dataImages.json'
-import headerImage from "../../../public/assets/portfolio-screen-header-image.jpg";
+import headerImage from "../../../public/static/assets/portfolio-screen-header-image.jpg";
 import styles from "./Portfolio.module.scss";
 
 const Portfolio = () => {

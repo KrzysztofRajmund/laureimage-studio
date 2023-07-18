@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import placeholder from "../../../public/assets/placeholder.jpg";
+import placeholder from "../../../public/static/assets/placeholder.jpg";
 import styles from "./SectionListPortrait.module.scss";
 import { ImageTypeJSON } from "../../utils/types";
 
