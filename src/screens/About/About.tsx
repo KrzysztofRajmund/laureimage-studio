@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
-import contentImage from "../../../public/assets/aboutscreen-content-image.jpg";
+import contentImage from "../../../public/assets/about-screen-content-image.jpg";
 import SectionImageWithContent from "../../components/SectionImageWithContent";
 import styles from './About.module.scss';
 import CustomLink from "../../components/CustomLink";

@@ -1,27 +1,69 @@
 import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
-import headerImage from '../../../public/assets/homescreen-header-image.jpg';
 import SectionHeaderImage from "../../components/SectionHeaderImage";
+import { SectionDescription } from "../../components/SectionDescription";
+import headerImage from "../../../public/assets/home-screen-header-image.jpg";
+import contentImage from "../../../public/assets/offer-screen-content-image.jpg";
 import styles from "./Offer.module.scss";
 
 const Offer = () => {
+  const offerDescription =
+    "Na zdjęciach staram się zawsze zatrzymać dla Państwa chwile i emocje z nimi związane. Jestem tam dla Was tworząc zdjęcia ułożone w historie. Staram się uchwycić ludzi takimi, jacy są. Nie poproszę Was o uśmiech, jestem fanem emocji, ale tych autentycznych, więc wolę poczekać, aż uśmiech przyjdzie sam. Pracując jako fotograf ślubny zawsze dokładam wszelkich starań, aby zdjęcia były ciekawe i niebanalne, zachowując przy edycji naturalne piękne kolory. Jeśli spodobały się Państwu zdjęcia z mojej strony zapraszam do kontaktu w celu poznania pełnej oferty.";
 
-  return (
-    <div className={styles.container}>
-      
-      <h2 className={styles.title}>Tytul dla oferty</h2>
-      <p className={styles.description}>
-        Na zdjęciach staram się zawsze zatrzymać dla Państwa chwile i emocje z
-        nimi związane. Jestem tam dla Was tworząc zdjęcia ułożone w historie .
-        Staram się uchwycić ludzi takimi, jacy są. Nie poproszę Was o uśmiech,
-        jestem fanem emocji, ale tych autentycznych, więc wolę poczekać, aż
-        uśmiech przyjdzie sam. Pracując jako fotograf ślubny zawsze dokładam
-        wszelkich starań, aby zdjęcia były ciekawe i niebanalne, zachowując przy
-        edycji naturalne piękne kolory. Jeśli spodobały się Państwu zdjęcia z
-        mojej strony zapraszam do kontaktu w celu poznania pełnej oferty.
-      </p>
-    </div>
-  );
+  const offers = [
+    {
+      title: "Reportaż Ślubny: 2900 zł",
+      desc: offerDescription,
+      img: contentImage,
+      list: [
+        "fotograf od przygotowań do oczepin (ok. 1 rano)",
+        "galeria online",
+        "około 500 wyedytowanych zdjęć",
+        "ślubne grawerowane USB",
+        "wydruki",
+        "zdjęcia grupowe / rodzinne",
+        "portrety Państwa Młodych w dniu ślubu",
+      ],
+    },
+    {
+      title: "Plener Ślubny: 900 zł",
+      desc: "Portrety Pary Młodej ułożone w historie z dnia pleneru",
+      img: contentImage,
+      list: [
+        "portrety Pary Młodej ułożone w historie z dnia pleneru",
+        "min. 70 wyedytowanych i wyretuszowanych zdjęć",
+        "online gallery",
+      ],
+    },
+    {
+      title: "Album: 400-600 zł",
+      desc: "Portrety Pary Młodej ułożone w historie z dnia pleneru",
+      img: contentImage,
+    },
+    {
+      title: "Sesja zaręczynowa: 500 zł",
+      desc: "Portrety Pary Młodej ułożone w historie z dnia pleneru",
+      img: contentImage,
+    },
+  ];
+
+  const renderOffers = () =>
+    offers.map((offer, index) => {
+      const isEven = index % 2 === 1;
+
+      return (
+        <SectionDescription
+          key={offer.desc}
+          description={offer.desc}
+          title={offer.title}
+          image={offer.img}
+          list={offer.list}
+          reversedContent={isEven}
+        />
+      );
+    });
+
+  return <div className={styles.container}>{renderOffers()}</div>;
 };
 
 Offer.getLayout = function getLayout(page: ReactElement) {
@@ -29,7 +71,9 @@ Offer.getLayout = function getLayout(page: ReactElement) {
     <>
       <SectionHeaderImage
         image={headerImage}
-        logo={<div>LOGO</div>}
+        logo={
+          <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>
+        }
         containerHeight={350}
       />
       <Layout>{page}</Layout>
