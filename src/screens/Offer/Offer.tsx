@@ -2,8 +2,11 @@ import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
 import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
-import headerImage from "../../../public/assets/offer-screen-header-image.jpg";
-import contentImage from "../../../public/assets/offer-screen-content-image.jpg";
+import headerImage from "../../../public/assets/offer-screen-header-image-2.jpg";
+import contentImageOne from "../../../public/assets/offer-screen-content-image-1.jpg";
+import contentImageTwo from "../../../public/assets/offer-screen-content-image-2-1.jpg";
+import contentImageThree from "../../../public/assets/offer-screen-content-image-3.jpg";
+import contentImageFour from "../../../public/assets/offer-screen-content-image-4.jpg";
 import styles from "./Offer.module.scss";
 import { useResponsive } from "../../utils/hooks";
 
@@ -17,7 +20,7 @@ const Offer = () => {
     {
       title: "Reportaż Ślubny: 2900 zł",
       desc: offerDescription,
-      img: contentImage,
+      img: contentImageOne,
       list: [
         "fotograf od przygotowań do oczepin (ok. 1 rano)",
         "galeria online",
@@ -31,21 +34,21 @@ const Offer = () => {
     {
       title: "Plener Ślubny: 900 zł",
       desc: "Portrety Pary Młodej ułożone w historie z dnia pleneru",
-      img: contentImage,
+      img: contentImageTwo,
       list: [
         "min. 70 wyedytowanych i wyretuszowanych zdjęć",
         "online gallery",
       ],
     },
     {
-      title: "Album: 400-600 zł",
-      desc: "Deluxe album z wybranymi zdjęciami",
-      img: contentImage,
-    },
-    {
       title: "Sesja zaręczynowa: 500 zł",
       desc: "Portrety oraz urozmaicone kadry ułożone w historie",
-      img: contentImage,
+      img: contentImageThree,
+    },
+    {
+      title: "Album: 400-600 zł",
+      desc: "Deluxe album z wybranymi zdjęciami",
+      img: contentImageFour,
     },
   ];
 
@@ -74,10 +77,11 @@ Offer.getLayout = function getLayout(page: ReactElement) {
     <>
       <SectionHeaderImage
         image={headerImage}
-        logo={
-          <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>
-        }
-        containerHeight={350}
+        //TODO: Adds company logo
+        // logo={
+        //   <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>
+        // }
+        containerHeight="65vh" 
       />
       <Layout>{page}</Layout>
     </>

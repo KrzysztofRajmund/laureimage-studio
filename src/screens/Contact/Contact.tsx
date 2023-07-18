@@ -19,14 +19,14 @@ const Contact = () => {
 
   return (
     <div className={styles.container}>
-    <SectionDescription
-      description={contact.desc}
-      title={contact.title}
-      image={contact.img}
-    />
-    <div className={styles.socialmedia}>
-    <SocialMedia />
-    </div>
+      <SectionDescription
+        description={contact.desc}
+        title={contact.title}
+        image={contact.img}
+      />
+      <div className={styles.socialmedia}>
+        <SocialMedia />
+      </div>
     </div>
   );
 };
@@ -36,10 +36,11 @@ Contact.getLayout = function getLayout(page: ReactElement) {
     <>
       <SectionHeaderImage
         image={headerImage}
-        logo={
-          <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>
-        }
-        containerHeight={350}
+        //TODO: Adds company logo
+        // logo={
+        //   <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>
+        // }
+        containerHeight="65vh"
       />
       <Layout>{page}</Layout>
     </>

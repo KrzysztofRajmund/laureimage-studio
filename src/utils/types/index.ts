@@ -1,1 +1,1 @@
-export type { ImageType } from "./Image";
+export type { ImageType, ImageTypeJSON } from "./Image";

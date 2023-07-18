@@ -1,42 +1,27 @@
-import { ReactElement, useEffect, useState } from "react";
-import axios from "axios";
+import { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
 import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
-import headerImage from "../../../public/assets/contact-screen-header-image.jpg";
-import contentImage from "../../../public/assets/contact-screen-content-image.jpg";
-import styles from "./Portfolio.module.scss";
 import { ImagesListVertical } from "../../components/ImagesListVertical";
+import dataImages from '../../dataImages.json'
+import headerImage from "../../../public/assets/portfolio-screen-header-image.jpg";
+import styles from "./Portfolio.module.scss";
 
 const Portfolio = () => {
-  //Note: Temporary placement for data:
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    const getImages = async () => {
-      const response = await axios.get(
-        "https://k2nstudio-api.herokuapp.com/items/"
-      );
-      setImages(response.data);
-    };
-    getImages();
-  }, []);
-
   const contactDescription =
     "Historie wspaniałych, szczęśliwych ludzi, których miałem przyjemność fotografować. Zapraszam Was do zapoznania się z moim portfolio i spędzenia kilku chwil z wyjątkowymi parami.";
 
-  const contact = {
+  const portfolioContent = {
     title: "Wasze Historie",
     desc: contactDescription,
-    img: contentImage,
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.description}>
-        <SectionDescription description={contact.desc} title={contact.title} />
+        <SectionDescription description={portfolioContent.desc} title={portfolioContent.title} />
       </div>
-      <ImagesListVertical images={images} />
+      <ImagesListVertical images={dataImages.images} />
     </div>
   );
 };
