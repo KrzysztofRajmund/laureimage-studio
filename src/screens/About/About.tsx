@@ -2,14 +2,14 @@ import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
 import contentImage from "../../../public/assets/about-screen-content-image.jpg";
 import SectionImageWithContent from "../../components/SectionImageWithContent";
-import styles from './About.module.scss';
+import styles from "./About.module.scss";
 import CustomLink from "../../components/CustomLink";
 
 const About = () => {
-  const title = "Moje fotografie"
+  const title = "Moje fotografie";
   const contentImageDesc = {
     desc: "Portret 2021",
-    actionButton: <CustomLink href='kontakt'>Contact &gt;&gt;</CustomLink>,
+    actionButton: <CustomLink href="kontakt">Contact &gt;</CustomLink>,
   };
 
   return (
