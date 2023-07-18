@@ -1,8 +1,6 @@
 import React, { useRef } from 'react';
-import Image from 'next/image';
 import CustomLink from '../../CustomLink';
 import { useInView } from '../../../utils/hooks';
-import logo from '../../../../public/assets/logo.png';
 import cx from 'classnames';
 import styles from './AppHeaderDesktop.module.scss';
 
