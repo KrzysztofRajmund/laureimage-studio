@@ -9,7 +9,7 @@ interface ISectionHeaderImage {
   logo?: JSX.Element;
   icon?: JSX.Element;
   title?: string;
-  containerHeight?: number;
+  containerHeight?: number | string;
 }
 const SectionHeaderImage = ({
   image,

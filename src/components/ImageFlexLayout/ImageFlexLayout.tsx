@@ -2,7 +2,7 @@ import Image from 'next/image';
 import placeholder from '../../../public/assets/placeholder.jpg';
 import cx from 'classnames';
 import styles from './ImageFlexLayout.module.scss';
-import { ImageType } from '../../screens/HomeScreen/HomeScreen';
+import { ImageType } from '../../utils/types';
 
 export interface ImageFlexLayoutProps {
     images: ImageType[];
