@@ -35,29 +35,31 @@
 
 //Typography
 @mixin header($headerTextColor) {
+  font-family: $font-family-header;
   font-size: $header-font-size;
   font-weight: 400;
   letter-spacing: 0.1rem;
   color: $headerTextColor;
-  line-height: 6.5rem;
+  line-height: 4rem;
   //mobile and tablet
   @include tabletDown {
-    line-height: 5.5rem;
+    line-height: 3.5rem;
   }
   @include phone {
-    line-height: 5rem;
+    line-height: 3rem;
   }
 }
 
 @mixin title {
+  font-family: $font-family-header;
   font-size: $title-font-size;
   font-weight: 400;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   color: $text-color-primary;
-  line-height: 5rem;
+  line-height: 3.5rem;
   //mobile and tablet
   @include tabletDown {
-    line-height: 4rem;
+    line-height: 3rem;
   }
 }
 

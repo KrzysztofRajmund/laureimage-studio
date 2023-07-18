@@ -11,6 +11,5 @@ export type ImageType = {
 export type ImageTypeJSON = {
   id: number | string;
   url: string;
-  category?: string;
-  subcategory?: string;
+  title?: string;
 };

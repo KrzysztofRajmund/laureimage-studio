@@ -27,12 +27,14 @@
 
   h2 {
     @include title;
+    color: $text-color-black;
+    line-height: 3.7rem;
     z-index: 1;
     opacity: 0;
     position: absolute;
     top: 25%;
-    left: 10%;
-    width: 50%;
+    left: 14%;
+    width: 25%;
     transition: all 0.3s linear;
 
     @include phone {
@@ -42,7 +44,15 @@
 
     &.animate {
       top: 14%;
-      opacity: 1;
+      opacity: 0.85;
+
+      @include desktopSmallDown {
+        top: 18%;
+      }
+
+      @include tabletDown {
+        top: 10%;
+      }
 
       @include phone {
         display: none;
