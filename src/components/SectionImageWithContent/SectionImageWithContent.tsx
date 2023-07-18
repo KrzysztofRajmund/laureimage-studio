@@ -1,6 +1,7 @@
-import { CSSProperties, useRef } from 'react';
+import { useRef } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { useIntersection } from '../../utils/hooks';
+import placeholder from '../../../public/static/assets/placeholder.jpg';
 import cx from 'classnames';
 import styles from './SectionImageWithContent.module.scss';
 
@@ -35,9 +36,10 @@ const SectionImageWithContent = ({
             <div className={cx(styles.image, { [styles.animate]: isImageInView })} ref={imageRef} >
                 <Image
                     priority
-                    src={image}
+                    src={`/static/assets/${image}`}
                     alt={imageDesc?.desc}
                     placeholder='blur'
+                    blurDataURL={placeholder.src}
                     layout='fill'
                     objectFit='cover'
                 />

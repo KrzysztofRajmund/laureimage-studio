@@ -6,11 +6,6 @@ import ImageGridLayout from "../../components/ImageGridLayout";
 import ImageFlexLayout from "../../components/ImageFlexLayout";
 import SectionListPortrait from "../../components/SectionListPortrait";
 import dataImages from "../../dataImages.json";
-import headerImage from "../../../public/static/assets/home-screen-header-image-2.jpg";
-import contentImage from "../../../public/static/assets/home-screen-content-image-2.jpg";
-import portraitImageOne from "../../../public/static/assets/home-screen-portrait-image-1.jpg";
-import portraitImageTwo from "../../../public/static/assets/home-screen-portrait-image-2.jpg";
-import portraitImageThree from "../../../public/static/assets/home-screen-portrait-image-3.jpg";
 import styles from "./HomeScreen.module.scss";
 
 const HomeScreen = () => {
@@ -34,21 +29,21 @@ const HomeScreen = () => {
   //section list portrait
   const portraitListTitle = "Ślub - najważniejsze wydarzenie";
   const portraitListImages = [
-    { id: 1, url: portraitImageOne, title: "na przygotowaniach" },
-    { id: 2, url: portraitImageTwo, title: "ślub w plenerze" },
-    { id: 3, url: portraitImageThree, title: "w kościele" },
+    { id: 1, url: "home-screen-portrait-image-1.jpg", title: "na przygotowaniach" },
+    { id: 2, url: "home-screen-portrait-image-2.jpg", title: "ślub w plenerze" },
+    { id: 3, url: "home-screen-portrait-image-3.jpg", title: "w kościele" },
   ];
 
   return (
     <div className={styles.container}>
       <SectionHeaderImage
         title={headerTitle}
-        image={headerImage}
+        image="home-screen-header-image-2.jpg"
         icon={<ArrowJump arrowDown containerStyle={headerArrowStyle} />}
       />
       <SectionImageWithContent
         title={contentTitle}
-        image={contentImage}
+        image="home-screen-content-image-2.jpg"
         subtitle={contentSubtitle}
         imageDesc={contentImageDesc}
       />

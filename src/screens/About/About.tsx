@@ -1,6 +1,5 @@
 import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
-import contentImage from "../../../public/assets/about-screen-content-image.jpg";
 import SectionImageWithContent from "../../components/SectionImageWithContent";
 import styles from "./About.module.scss";
 import CustomLink from "../../components/CustomLink";
@@ -16,7 +15,7 @@ const About = () => {
     <div className={styles.container}>
       <SectionImageWithContent
         title={title}
-        image={contentImage}
+        image="about-screen-content-image.jpg"
         subtitle="Emotive story telling"
         imageDesc={contentImageDesc}
       />

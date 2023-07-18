@@ -2,11 +2,6 @@ import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
 import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
-import headerImage from "../../../public/static/assets/offer-screen-header-image-2.jpg";
-import contentImageOne from "../../../public/static/assets/offer-screen-content-image-1.jpg";
-import contentImageTwo from "../../../public/static/assets/offer-screen-content-image-2-1.jpg";
-import contentImageThree from "../../../public/static/assets/offer-screen-content-image-3.jpg";
-import contentImageFour from "../../../public/static/assets/offer-screen-content-image-4.jpg";
 import styles from "./Offer.module.scss";
 import { useResponsive } from "../../utils/hooks";
 
@@ -20,7 +15,7 @@ const Offer = () => {
     {
       title: "Reportaż Ślubny: 2900 zł",
       desc: offerDescription,
-      img: contentImageOne,
+      img: "offer-screen-content-image-1.jpg",
       list: [
         "fotograf od przygotowań do oczepin (ok. 1 rano)",
         "galeria online",
@@ -34,7 +29,7 @@ const Offer = () => {
     {
       title: "Plener Ślubny: 900 zł",
       desc: "Portrety Pary Młodej ułożone w historie z dnia pleneru",
-      img: contentImageTwo,
+      img: "offer-screen-content-image-2-1.jpg",
       list: [
         "min. 70 wyedytowanych i wyretuszowanych zdjęć",
         "online gallery",
@@ -43,19 +38,19 @@ const Offer = () => {
     {
       title: "Sesja zaręczynowa: 500 zł",
       desc: "Portrety oraz urozmaicone kadry ułożone w historie",
-      img: contentImageThree,
+      img: "offer-screen-content-image-3.jpg",
     },
     {
       title: "Album: 400-600 zł",
       desc: "Deluxe album z wybranymi zdjęciami",
-      img: contentImageFour,
+      img: "offer-screen-content-image-4.jpg",
     },
   ];
 
   const renderOffers = () =>
     offers.map((offer, index) => {
       const isEven = index % 2 === 1;
-      const shouldBeReversed = isDesktopScreen && offer.img && isEven
+      const shouldBeReversed = isDesktopScreen && !!offer.img && isEven
 
       return (
         <SectionDescription
@@ -76,7 +71,7 @@ Offer.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <SectionHeaderImage
-        image={headerImage}
+        image="offer-screen-header-image-2.jpg"
         //TODO: Adds company logo
         // logo={
         //   <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>

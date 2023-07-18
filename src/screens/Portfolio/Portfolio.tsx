@@ -4,7 +4,6 @@ import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
 import { ImagesListVertical } from "../../components/ImagesListVertical";
 import dataImages from '../../dataImages.json'
-import headerImage from "../../../public/static/assets/portfolio-screen-header-image.jpg";
 import styles from "./Portfolio.module.scss";
 
 const Portfolio = () => {
@@ -29,7 +28,7 @@ const Portfolio = () => {
 Portfolio.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
-      <SectionHeaderImage image={headerImage} containerHeight="65vh" />
+      <SectionHeaderImage image="portfolio-screen-header-image.jpg" containerHeight="65vh" />
       <Layout>{page}</Layout>
     </>
   );

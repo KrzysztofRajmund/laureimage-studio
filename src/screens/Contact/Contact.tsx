@@ -2,8 +2,6 @@ import React, { ReactElement } from "react";
 import { Layout } from "../../layout/Layout";
 import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
-import headerImage from "../../../public/static/assets/contact-screen-header-image.jpg";
-import contentImage from "../../../public/static/assets/contact-screen-content-image.jpg";
 import styles from "./Contact.module.scss";
 import SocialMedia from "../../components/SocialMedia";
 
@@ -14,7 +12,7 @@ const Contact = () => {
   const contact = {
     title: "Powiedz Cześć!",
     desc: contactDescription,
-    img: contentImage,
+    img: "contact-screen-content-image.jpg",
   };
 
   return (
@@ -35,7 +33,7 @@ Contact.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <SectionHeaderImage
-        image={headerImage}
+        image="contact-screen-header-image.jpg"
         //TODO: Adds company logo
         // logo={
         //   <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>

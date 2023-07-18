@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useIntersection } from "../../utils/hooks";
+import placeholder from '../../../public/static/assets/placeholder.jpg';
 import cx from "classnames";
 import styles from "./SectionHeaderImage.module.scss";
 
@@ -35,9 +36,10 @@ const SectionHeaderImage = ({
       <div className={styles.logo}>{logo}</div>
       <Image
         priority
-        src={image}
+        src={`/static/assets/${image}`}
         alt="fotografia ślubna"
         placeholder="blur"
+        blurDataURL={placeholder.src}
         layout="fill"
         objectFit="cover"
       />

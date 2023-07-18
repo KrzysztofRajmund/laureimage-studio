@@ -24,7 +24,7 @@ const SectionListPortrait = ({
             <div key={image.id} className={styles.content}>
               <div className={styles.imageContainer}>
                 <Image
-                  src={image.url}
+                  src={`/static/assets/${image.url}`}
                   alt={`image ${image.id}`}
                   placeholder="blur"
                   blurDataURL={placeholder.src}
