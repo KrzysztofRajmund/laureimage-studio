@@ -30,14 +30,19 @@
     @include header($text-color-white);
     opacity: 0;
     top: 65%;
-    right: -2%;
+    right: -4%;
     margin-right: 5px;
     width: 50%;
     transition: all 0.3s linear;
 
+    @include tabletDown {
+      right: 0;
+    }
+
     @include phone {
       text-align: center;
       width: 85%;
+      right: -1%;
     }
 
     &.animate {

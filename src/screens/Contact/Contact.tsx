@@ -4,6 +4,8 @@ import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
 import styles from "./Contact.module.scss";
 import SocialMedia from "../../components/SocialMedia";
+import { ScreenSize } from "../../utils/enums";
+import { isBrowser } from "../../utils/helpers";
 
 const Contact = () => {
   const contactDescription =
@@ -30,16 +32,34 @@ const Contact = () => {
 };
 
 Contact.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <>
+  const sectionHeaderImage = () => {
+    if (isBrowser() && window.innerWidth <= ScreenSize.SM) {
+      return (
+        <SectionHeaderImage
+          image="contact-screen-header-image-mobile.jpg"
+          //TODO: Adds company logo
+          // logo={
+          //   <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>
+          // }
+          containerHeight="55vh"
+        />
+      );
+    }
+    return (
       <SectionHeaderImage
         image="contact-screen-header-image.jpg"
         //TODO: Adds company logo
         // logo={
         //   <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>
         // }
-        containerHeight="65vh"
+        containerHeight="75vh"
       />
+    );
+  };
+
+  return (
+    <>
+      {sectionHeaderImage()}
       <Layout>{page}</Layout>
     </>
   );
