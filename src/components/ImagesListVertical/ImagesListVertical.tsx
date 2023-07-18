@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import placeholder from '../../../public/static/assets/placeholder.jpg';
 import styles from './ImagesListVertical.module.scss';
 import { ImageTypeJSON } from '../../utils/types';
 import { FC } from 'react';
@@ -19,8 +18,7 @@ export const ImagesListVertical: FC<ImagesListVerticalProps> = ({ images }) => {
                             src={`/static/assets/portfolio/${image.url}`}
                             alt={`image ${image.id}`}
                             placeholder='blur'
-                            blurDataURL={placeholder.src}
-                            layout='fill'
+                            blurDataURL="/static/assets/placeholder.jpg"                            layout='fill'
                             objectFit='cover'
                         />
                     </div>

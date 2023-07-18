@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import placeholder from "../../../public/static/assets/placeholder.jpg";
 import styles from "./SectionListPortrait.module.scss";
 import { ImageTypeJSON } from "../../utils/types";
 
@@ -27,7 +26,7 @@ const SectionListPortrait = ({
                   src={`/static/assets/${image.url}`}
                   alt={`image ${image.id}`}
                   placeholder="blur"
-                  blurDataURL={placeholder.src}
+                  blurDataURL="/static/assets/placeholder.jpg"
                   layout="fill"
                   objectFit="cover"
                 />

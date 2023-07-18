@@ -1,6 +1,5 @@
 import { FC, useCallback } from "react";
 import Image, { StaticImageData } from "next/image";
-import placeholder from '../../../public/static/assets/placeholder.jpg';
 import cx from "classnames";
 import styles from "./SectionDescription.module.scss";
 
@@ -56,7 +55,7 @@ export const SectionDescription: FC<SectionDescription> = ({
           src={`/static/assets/${image}`}
           alt="oferta"
           placeholder="blur"
-          blurDataURL={placeholder.src}
+          blurDataURL="/static/assets/placeholder.jpg"
           layout="fill"
           objectFit="cover"
         />

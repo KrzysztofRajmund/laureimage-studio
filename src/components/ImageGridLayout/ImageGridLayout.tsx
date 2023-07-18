@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { CSSProperties } from 'react';
-import placeholder from '../../../public/static/assets/placeholder.jpg';
 import styles from './ImageGridLayout.module.scss';
 import { ImageType } from '../../utils/types';
 export interface ImageGridLayoutProps {
@@ -19,7 +18,7 @@ const ImageGridLayout = ({ images, title, style }: ImageGridLayoutProps) => {
                         <Image
                             priority
                             placeholder='blur'
-                            blurDataURL={placeholder.src}
+                            blurDataURL="/static/assets/placeholder.jpg"
                             src={image.url}
                             alt={`image ${image.id}`}
                             layout='fill'

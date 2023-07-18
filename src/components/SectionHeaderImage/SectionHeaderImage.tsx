@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useIntersection } from "../../utils/hooks";
-import placeholder from '../../../public/static/assets/placeholder.jpg';
 import cx from "classnames";
 import styles from "./SectionHeaderImage.module.scss";
 
@@ -39,7 +38,7 @@ const SectionHeaderImage = ({
         src={`/static/assets/${image}`}
         alt="fotografia ślubna"
         placeholder="blur"
-        blurDataURL={placeholder.src}
+        blurDataURL="/static/assets/placeholder.jpg"
         layout="fill"
         objectFit="cover"
       />
