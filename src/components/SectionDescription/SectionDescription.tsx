@@ -27,7 +27,7 @@ export const SectionDescription: FC<SectionDescription> = ({
     const textContent = (
       <div
         className={cx(styles.textContent, {
-          [styles.reversed]: reversedContent && image,
+          [styles.reversed]: reversedContent,
         })}
       >
         {title && <h2 className={styles.title}>{title}</h2>}
