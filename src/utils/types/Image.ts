@@ -6,3 +6,11 @@ export type ImageType = {
   portrait?: boolean;
   jumbotronUrl?: string;
 };
+
+//NOTE: Probably temporary json ImageType
+export type ImageTypeJSON = {
+  id: number | string;
+  url: string;
+  category?: string;
+  subcategory?: string;
+};
