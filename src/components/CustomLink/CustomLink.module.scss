@@ -1,15 +1,16 @@
-@import '../../styles/utils.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
 
 .default {
   font-weight: bolder;
+  color: $text-color-black;
 }
 
 .underline {
   position: relative;
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: -0.7rem;
