@@ -17,7 +17,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="Laureimage" content="Laureimage" />
+          <meta name="Laureimage" content="Laureimage Fotografia Ślubna" />
           <meta name="author" content="Krzysztof Nadlonek" />
           <link rel="manifest" href="/manifest.json" />
         </Head>
