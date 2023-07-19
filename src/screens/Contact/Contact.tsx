@@ -4,6 +4,7 @@ import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
 import styles from "./Contact.module.scss";
 import SocialMedia from "../../components/SocialMedia";
+import { Meta } from "../../meta";
 
 const Contact = () => {
   const contactDescription =
@@ -36,6 +37,15 @@ Contact.getLayout = function getLayout(page: ReactElement) {
 
   return (
     <>
+      <Meta
+        webUrl="https://laureimage.com/kontakt"
+        keywords="Fotografia slubna, plener slubny, kontakt fotografia slubna szczecin"
+        type="text"
+        title="Laureimage kontakt - fotograf ślubny"
+        description="Powiedz Cześć, kontakt Laureimage"
+        imageUrl="https://laureimage.com/_ipx/w_1920,q_75/%2Fstatic%2Fassets%2Fcontact-screen-header-image.jpg?url=%2Fstatic%2Fassets%2Fcontact-screen-header-image.jpg&w=1920&q=75"
+        imageAlt="Laureimage kontakt"
+      />
       <SectionHeaderImage
         image="contact-screen-header-image.jpg"
         //TODO: Adds company logo

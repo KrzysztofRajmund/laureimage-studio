@@ -41,10 +41,10 @@ const HomeScreen = () => {
         webUrl="https://www.laureimage.com"
         keywords="Laureimage, fotograf ślubny, fotograf szczecin, fotografia ślubna, wesele, plener ślubny"
         type="text"
-        title="Fotografia Ślubna, Fotograf Ślubny Szczecin"
+        title="Fotograf Ślubny Szczecin"
         description="Naturalna Fotografia Ślubna, Fotograf Szczecin"
-        imageUrl="https://www.laureimage.com/_next/image?url=%2Fstatic%2Fassets%2Fhome-screen-header-image-2.jpg&w=1920&q=75"
-        imageAlt="Fotografia Ślubna Home"
+        imageUrl="https://laureimage.com/_ipx/w_1920,q_75/%2Fstatic%2Fassets%2Fhome-screen-header-image-2.jpg?url=%2Fstatic%2Fassets%2Fhome-screen-header-image-2.jpg&w=1920&q=75"
+        imageAlt="Laureimage Fotografia Ślubna Home"
       />
     <div className={styles.container}>
       <SectionHeaderImage

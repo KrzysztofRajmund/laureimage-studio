@@ -4,6 +4,7 @@ import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
 import styles from "./Offer.module.scss";
 import { useResponsive } from "../../utils/hooks";
+import { Meta } from "../../meta";
 
 const Offer = () => {
   const {isDesktopScreen} = useResponsive();
@@ -70,6 +71,15 @@ const Offer = () => {
 Offer.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
+     <Meta
+        webUrl="https://laureimage.com/oferta"
+        keywords="Fotografia slubna oferta, plener slubny oferta, oferta fotografia slubna szczecin, cennik fotografia ślubna szczecin, reportaż ślubny"
+        type="text"
+        title="Oferta laureimage - fotograf ślubny szczecin"
+        description="Reportaż ślubny ferta"
+        imageUrl="https://laureimage.com/_ipx/w_1920,q_75/%2Fstatic%2Fassets%2Foffer-screen-header-image-2.jpg?url=%2Fstatic%2Fassets%2Foffer-screen-header-image-2.jpg&w=1920&q=75"
+        imageAlt="Laureimage oferta"
+      />
       <SectionHeaderImage
         image="offer-screen-header-image-2.jpg"
         //TODO: Adds company logo
