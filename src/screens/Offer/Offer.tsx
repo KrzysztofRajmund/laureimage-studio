@@ -76,7 +76,7 @@ Offer.getLayout = function getLayout(page: ReactElement) {
         // logo={
         //   <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>
         // }
-        containerHeight="65vh" 
+        containerHeight="70vh" 
       />
       <Layout>{page}</Layout>
     </>

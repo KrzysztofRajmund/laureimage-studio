@@ -4,8 +4,6 @@ import SectionHeaderImage from "../../components/SectionHeaderImage";
 import { SectionDescription } from "../../components/SectionDescription";
 import styles from "./Contact.module.scss";
 import SocialMedia from "../../components/SocialMedia";
-import { ScreenSize } from "../../utils/enums";
-import { isBrowser } from "../../utils/helpers";
 
 const Contact = () => {
   const contactDescription =
@@ -32,20 +30,12 @@ const Contact = () => {
 };
 
 Contact.getLayout = function getLayout(page: ReactElement) {
-  const sectionHeaderImage = () => {
-    if (isBrowser() && window.innerWidth <= ScreenSize.SM) {
-      return (
-        <SectionHeaderImage
-          image="contact-screen-header-image-mobile.jpg"
-          //TODO: Adds company logo
-          // logo={
-          //   <div style={{ color: "white", fontSize: "3rem" }}>Laure Logo</div>
-          // }
-          containerHeight="55vh"
-        />
-      );
-    }
-    return (
+  //TODO: Adds function to handle large screen view height for header images in almost all screens
+  // const imageUrl = isLargeScreen() ? "contact-screen-header-image.jpg" : "contact-screen-header-image-mobile.jpg"
+  // const sectionHeight = isLargeScreen() ? "85vh" : "55vh"
+
+  return (
+    <>
       <SectionHeaderImage
         image="contact-screen-header-image.jpg"
         //TODO: Adds company logo
@@ -54,12 +44,6 @@ Contact.getLayout = function getLayout(page: ReactElement) {
         // }
         containerHeight="75vh"
       />
-    );
-  };
-
-  return (
-    <>
-      {sectionHeaderImage()}
       <Layout>{page}</Layout>
     </>
   );
