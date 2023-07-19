@@ -52,15 +52,13 @@
     },
     {
       "id": "100 (7).jpg",
-      "category": "",
-      "subcategory": "home",
-      "url": "100 (7).jpg"
+      "url": "100 (7).jpg",
+      "title": ""
     },
     {
       "id": "100 (8).jpg",
-      "category": "",
-      "subcategory": "home",
-      "url": "100 (8).jpg"
+      "url": "100 (8).jpg",
+      "title": ""
     },
     {
       "id": "100 (9).jpg",
@@ -118,9 +116,8 @@
       "title": ""
     },
     {
-      "id": 8,
-      "category": "100 (20).jpg",
-      "subcategory": "",
+      "id": "100 (20).jpg",
+      "title": "",
       "url": "100 (20).jpg"
     },
     {
@@ -135,9 +132,8 @@
     },
     {
       "id": "100 (23).jpg",
-      "category": "",
-      "subcategory": "home",
-      "url": "100 (23).jpg"
+      "url": "100 (23).jpg",
+      "title": ""
     },
     {
       "id": "100 (24).jpg",
