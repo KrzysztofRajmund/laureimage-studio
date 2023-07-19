@@ -1,6 +1,8 @@
 @import "../../styles/variables.scss";
 @import "../../styles/utils.scss";
 
+$image-min-width: 345px;
+
 .container {
   @include flexCenter;
   flex-direction: column;
@@ -9,27 +11,29 @@
 
   .image {
     position: relative;
-    width: 60%;
-    height: 55vh;
+    width: 900px;
+    height: 600px;
     margin: 0.5rem;
 
     @include desktopDown {
-      width: 70%;
-    }
-
-    @include desktopSmallDown {
-      width: 92%;
+      width: 700px;
+      height: 500px;
     }
 
     @include tabletDown {
-      width: 90%;
-      height: 35vh;
+      width: 495px;
+      height: 330px;
       margin: 0.5rem 0;
     }
 
     @include phone {
+      width: $image-min-width;
+      height: 230px;
+    }
+
+    //custom screen size
+    @media screen and (max-width: $image-min-width) {
       width: 100%;
-      height: 27vh;
     }
   }
 }
