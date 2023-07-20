@@ -9,13 +9,17 @@ import { Meta } from "../../meta";
 const Offer = () => {
   const {isDesktopScreen} = useResponsive();
 
-  const offerDescription =
-    "Na zdjęciach staram się zawsze zatrzymać dla Państwa chwile i emocje z nimi związane. Jestem tam dla Was tworząc zdjęcia ułożone w historie. Staram się uchwycić ludzi takimi, jacy są. Nie poproszę Was o uśmiech, jestem fanem emocji, ale tych autentycznych, więc wolę poczekać, aż uśmiech przyjdzie sam. Pracując jako fotograf ślubny zawsze dokładam wszelkich starań, aby zdjęcia były ciekawe i niebanalne, zachowując przy edycji naturalne piękne kolory. Jeśli spodobały się Państwu zdjęcia z mojej strony zapraszam do kontaktu w celu poznania pełnej oferty.";
+  const reportageDescription =
+    "Moim celem jest stworzenie dla Was pięknych wspomnień, które będą towarzyszyć Wam przez całe życie. Usługi fotograficzne świadczę z pełnym oddaniem, zrozumieniem i wrażliwością na Wasze indywidualne potrzeby. Jestem przekonany, że każda para ma swój unikalny styl i historię, dlatego staram się poznać Waszą opowieść, by móc ją oddać w moich zdjęciach.";
+
+    const sessionDescription = "Portrety Pary Młodej ułożone w historie z dnia pleneru.";
+    const engagementDescription = "Portrety oraz urozmaicone kadry ułożone w historie.";
+    const albumDescription = "Deluxe album z wybranymi zdjęciami. Tworzę wyjątkowy album, który będzie zachwycał Was i Waszych bliskich przez lata. Dbałość o detale i wysoka jakość wykonania to moja misja."
 
   const offers = [
     {
       title: "Reportaż Ślubny: 2900 zł",
-      desc: offerDescription,
+      desc: reportageDescription,
       img: "offer-screen-content-image-1.jpg",
       list: [
         "fotograf od przygotowań do oczepin (ok. 1 rano)",
@@ -29,7 +33,7 @@ const Offer = () => {
     },
     {
       title: "Plener Ślubny: 900 zł",
-      desc: "Portrety Pary Młodej ułożone w historie z dnia pleneru",
+      desc: sessionDescription,
       img: "offer-screen-content-image-2-1.jpg",
       list: [
         "min. 70 wyedytowanych i wyretuszowanych zdjęć",
@@ -37,13 +41,13 @@ const Offer = () => {
       ],
     },
     {
-      title: "Sesja zaręczynowa: 500 zł",
-      desc: "Portrety oraz urozmaicone kadry ułożone w historie",
+      title: "Sesja narzeczeńska: 500 zł",
+      desc: engagementDescription,
       img: "offer-screen-content-image-3.jpg",
     },
     {
       title: "Album: 400-600 zł",
-      desc: "Deluxe album z wybranymi zdjęciami",
+      desc: albumDescription,
       img: "offer-screen-content-image-4.jpg",
     },
   ];
@@ -73,7 +77,7 @@ Offer.getLayout = function getLayout(page: ReactElement) {
     <>
      <Meta
         webUrl="https://laureimage.com/oferta"
-        keywords="Fotografia slubna oferta, plener slubny oferta, oferta fotografia slubna szczecin, cennik fotografia ślubna szczecin, reportaż ślubny"
+        keywords="Fotografia slubna oferta, plener slubny oferta, oferta fotografia slubna szczecin, cennik fotografia ślubna szczecin, reportaż ślubny, sesja narzeczeńska, sesja zaręczynowa"
         type="text"
         title="Oferta laureimage - fotograf ślubny szczecin"
         description="Reportaż ślubny ferta"
