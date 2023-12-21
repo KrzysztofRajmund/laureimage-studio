@@ -14,7 +14,7 @@ export const AppHeaderDesktop = () => {
       <CustomLink href='/' className={styles.logo}>
         {/* TODO: when logo will be ready replace with image */}
         {/* <Image src={logo} alt='laureimage logo' /> */}
-        Laureimage
+        Laureimage Rebase Test
       </CustomLink>
       <div className={styles.menu}>
         <CustomLink href='/' activeLinkStyle='underline'>
