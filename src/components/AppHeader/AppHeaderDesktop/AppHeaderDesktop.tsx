@@ -24,7 +24,7 @@ export const AppHeaderDesktop = () => {
           Portfolio
         </CustomLink>
         <CustomLink href='/onas' activeLinkStyle='underline'>
-          O nas
+          O Nas
         </CustomLink>
         <CustomLink href='/oferta' activeLinkStyle='underline'>
           Oferta
