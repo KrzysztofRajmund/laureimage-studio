@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import { useTranslation } from "next-i18next";
 import { Layout } from "../../layout/Layout";
 import SectionImageWithContent from "../../components/SectionImageWithContent";
 import styles from "./About.module.scss";
@@ -11,6 +12,8 @@ const About = () => {
     desc: "Portret 2021",
     actionButton: <CustomLink href="kontakt">Kontakt &gt;</CustomLink>,
   };
+
+  const { t } = useTranslation("common");
 
   return (
     <>
@@ -32,15 +35,7 @@ const About = () => {
         />
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>
-          Na zdjęciach staram się zawsze zatrzymać dla Państwa chwile i emocje z
-          nimi związane. Jestem tam dla Was tworząc zdjęcia ułożone w historie .
-          Staram się uchwycić ludzi takimi, jacy są. Nie poproszę Was o uśmiech,
-          jestem fanem emocji, ale tych autentycznych, więc wolę poczekać, aż
-          uśmiech przyjdzie sam. Pracując jako fotograf ślubny zawsze dokładam
-          wszelkich starań, aby zdjęcia były ciekawe i niebanalne, zachowując
-          przy edycji naturalne piękne kolory. Jeśli spodobały się Państwu
-          zdjęcia z mojej strony zapraszam do kontaktu w celu poznania pełnej
-          oferty.
+        {t("about.description")}
         </p>
       </div>
     </>

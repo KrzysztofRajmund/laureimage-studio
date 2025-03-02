@@ -1,6 +1,8 @@
 import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
+import "../lib/i18n"; 
 import { Layout } from '../layout/Layout';
 import Root from './root';
 import '../styles/globals.scss';
@@ -18,9 +20,11 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => <Layout>{page}</Layout>);
 
   return <Root>{getLayout(<Component {...pageProps} />)}</Root>;
 }
+
+export default appWithTranslation(MyApp);
