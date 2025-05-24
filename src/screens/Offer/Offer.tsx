@@ -18,21 +18,21 @@ const Offer = () => {
 
   const offers = [
     {
-      title: "Reportaż Ślubny: 2900 zł",
+      title: "Reportaż Ślubny: od 3000 zł",
       desc: reportageDescription,
       img: "offer-screen-content-image-1.jpg",
       list: [
-        "fotograf od przygotowań do oczepin (ok. 1 rano)",
+        "reportaż z dnia ślubu",
         "galeria online",
-        "około 500 wyedytowanych zdjęć",
+        "min. 400 wyedytowanych zdjęć",
         "ślubne grawerowane USB",
         "wydruki",
         "zdjęcia grupowe / rodzinne",
-        "portrety Państwa Młodych w dniu ślubu",
+        "sesja portretowa Państwa Młodych w dniu ślubu",
       ],
     },
     {
-      title: "Plener Ślubny: 900 zł",
+      title: "Plener Ślubny: od 1000 zł",
       desc: sessionDescription,
       img: "offer-screen-content-image-2-1.jpg",
       list: [
@@ -41,12 +41,12 @@ const Offer = () => {
       ],
     },
     {
-      title: "Sesja narzeczeńska: 500 zł",
+      title: "Sesja narzeczeńska: od 800 zł",
       desc: engagementDescription,
       img: "offer-screen-content-image-3.jpg",
     },
     {
-      title: "Album: 400-600 zł",
+      title: "Album: 450-700 zł",
       desc: albumDescription,
       img: "offer-screen-content-image-4.jpg",
     },
